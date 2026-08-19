@@ -1,0 +1,57 @@
+{
+  "name": "@alwkala/tidyfactor-next",
+  "version": "1.1.0",
+  "description": "TidyFactor Next \u2014 Production-Grade Multi-Tenant SaaS Architecture & Development Performance Engine",
+  "main": "SKILL.md",
+  "bin": {
+    "tidyfactor-next": "./bin/create-kit.js",
+    "create-tidyfactor-next": "./bin/create-kit.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TidyFactor/Next.git"
+  },
+  "keywords": [
+    "tidyfactor",
+    "tidyfactor-next",
+    "multi-tenant",
+    "saas",
+    "nextjs16",
+    "react19",
+    "supabase",
+    "postgres",
+    "rls",
+    "tenant-isolation",
+    "performance-optimization",
+    "agentic-ai",
+    "antigravity",
+    "claude-skill"
+  ],
+  "author": "TidyFactor & Alwkala <hello@tidyfactor.com> (https://alwkala.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TidyFactor/Next/issues"
+  },
+  "homepage": "https://tidyfactor.com",
+  "scripts": {
+    "add-skill": "node ./bin/add-skill.js"
+  },
+  "dependencies": {},
+  "files": [
+    "SKILL.md",
+    "references/",
+    "tools/",
+    "bin/",
+    "AGENTS.md",
+    "SKILL-REGISTRY.md",
+    "VISION.md",
+    "brand.json",
+    ".tidyfactor",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "README.ar.md"
+  ]
+}

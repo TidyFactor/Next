@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "brand-core-v2",
+  "meta": {
+    "product": "TidyFactor Next.js Architecture Engine",
+    "tagline": "Production-Grade Multi-Tenant SaaS Architecture & Security Engine",
+    "description": "An opinionated, production-grade architectural framework for AI Coding Agents and senior fullstack engineers. Enforces unbreakable tenant isolation on Next.js 16 and Supabase using PostgreSQL Row Level Security (RLS) as the hard security boundary, paired with an evidence-based development performance engine.",
+    "version": "1.1.0",
+    "lastUpdated": "2026-08-18"
+  },
+  "identity": {
+    "logo": {
+      "full": "assets/logo.svg",
+      "fullDark": "assets/logo-dark.svg",
+      "mark": "assets/logo-mark.svg",
+      "favicon": "assets/favicon.svg",
+      "minClearSpace": "1x logo-mark height on all sides",
+      "minSizePx": 24
+    },
+    "socialPreview": {
+      "ogImage": "assets/og-default.png",
+      "ogDimensions": "1200x630"
+    }
+  },
+  "voice": {
+    "tone": "architectural, security-first, deterministic, evidence-based, unyielding on tenant isolation",
+    "vocabulary": {
+      "preferred": [
+        "tenant isolation",
+        "row level security",
+        "fail-closed resolution",
+        "custom jwt hook",
+        "service_role isolation",
+        "pluggable query layer",
+        "server components",
+        "evidence-based optimization",
+        "bottleneck causality",
+        "noise control"
+      ],
+      "banned": [
+        "simple multi-tenant",
+        "just add where clause",
+        "disable rls for now",
+        "pass service role to client",
+        "generic optimization",
+        "turn off cache globally",
+        "easy fix"
+      ]
+    },
+    "principles": [
+      "RLS is the security boundary; application code filtering is only a query-plan hint.",
+      "Service-role key never reaches client bundles or public endpoints.",
+      "Tenant context is resolved once at the edge and passed down explicitly.",
+      "Performance optimization must never weaken security, auth, or tenant boundaries.",
+      "Audit must precede optimization; every change requires DELTA benchmark evidence."
+    ]
+  },
+  "pillars": {
+    "1_foundation": "Multi-Tenant Scaffolding, Edge Resolution & ARCHITECTURE.md generation",
+    "2_security": "4-Policy RLS Patterns, Custom JWT Claims Hook & Membership Model",
+    "3_data": "Shared Schema with tenant_id, Pluggable Query Layer (Supabase/Drizzle/Prisma)",
+    "4_application": "App Router, Server Components, Server Actions & Route Handlers",
+    "5_quality": "Automated RLS Coverage Audits, Security Testing & Leak Diagnosis",
+    "6_devops_perf": "Development Performance Audit (13 Phases), Bottleneck Classification & Safe Optimizations",
+    "7_operations": "Fail-Closed Recovery, Disaster Runbooks & Architecture Compliance"
+  }
+}
