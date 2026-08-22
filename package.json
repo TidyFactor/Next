@@ -39,19 +39,21 @@
   "dependencies": {},
   "files": [
     "SKILL.md",
-    "references/",
-    "tools/",
-    "bin/",
+    "references",
+    "tools",
+    "bin",
+    "brand.json",
+    ".tidyfactor",
     "AGENTS.md",
     "SKILL-REGISTRY.md",
     "VISION.md",
-    "brand.json",
-    ".tidyfactor",
-    "CHANGELOG.md",
-    "CODE_OF_CONDUCT.md",
-    "CONTRIBUTING.md",
-    "LICENSE",
     "README.md",
-    "README.ar.md"
-  ]
+    "README.ar.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    ".claude-skill"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
