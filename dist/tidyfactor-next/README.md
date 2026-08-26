@@ -11,7 +11,7 @@
 [![Next.js 16 Ready](https://img.shields.io/badge/Next.js-16%20App%20Router-black.svg?style=for-the-badge)](#-platform-stack--architecture)
 [![Architect Score](https://img.shields.io/badge/Architect%20Score-8%2F8%20Pass%20(100%25)-green.svg?style=for-the-badge)](#-tidyfactor-skill-methodology--governance)
 
-[✨ Ecosystem Hub](https://alwkala.com) • [🔒 Tenant Isolation](#-locked-tenant-isolation-model) • [⚡ 14-Stage Lifecycle](#-14-stage-saas-command-lifecycle) • [🚀 Dev-Perf Engine](#-development-performance--resource-optimization-engine) • [🛡️ RLS & Auth Patterns](#%EF%B8%8F-rls-policy-matrix--auth-hooks) • [📖 بالعربية](README.ar.md)
+[✨ Ecosystem Hub](https://alwkala.com) • [🔒 Tenant Isolation](#-locked-tenant-isolation-model) • [⚡ 15-Stage Lifecycle](#-15-stage-saas-command-lifecycle) • [🚀 Dev-Perf Engine](#-development-performance--resource-optimization-engine) • [🛡️ RLS & Auth Patterns](#%EF%B8%8F-rls-policy-matrix--auth-hooks) • [📖 بالعربية](README.ar.md)
 
 </div>
 
@@ -76,26 +76,27 @@ CREATE POLICY "organizations_tenant_isolation_delete" ON public.organizations
 
 ---
 
-## ⚡ 14-Stage SaaS Command Lifecycle
+## ⚡ 15-Stage SaaS Command Lifecycle
 
-The entire SaaS engineering lifecycle is structured into 14 deterministic commands:
+The entire SaaS engineering lifecycle is structured into 15 deterministic commands with 100% operational coverage:
 
 | Stage | Command | User Intent | What It Loads | Status |
 |---|---|---|---|:---:|
+| **0. Discovery** | `brief` | Pre-flight CDL discovery & baseline architecture cache | `references/workflows/brief.md` + `decision-points.md` + `quality-bar.md` | ✅ **Built** |
 | **1. Foundation** | `init` | Scaffold new multi-tenant project & generate `ARCHITECTURE.md` | `references/workflows/init.md` + `spec.md` + `architecture-doc-skeleton.md` | ✅ **Built** |
 | **1. Foundation** | `tenant` | Tenant resolution, context propagation, lifecycle | `references/workflows/tenant.md` + `references/memory/spec.md` | ✅ **Built** |
 | **2. Security** | `rls` | RLS policy authoring, 4-policy pattern, leak audit | `references/workflows/rls.md` + `spec.md` + `rls-patterns.md` | ✅ **Built** |
 | **2. Security** | `auth` | Supabase Auth, custom JWT claims hook, RBAC/ABAC | `references/workflows/auth.md` + `spec.md` + `auth-patterns.md` | ✅ **Built** |
-| **3. Data** | `data` | Schema, migrations, transactions, constraints | `references/commands/data.md` *(planned)* | ⏳ *Roadmap* |
-| **3. Data** | `storage` | Tenant-scoped buckets, signed URLs, storage RLS | `references/commands/storage.md` *(planned)* | ⏳ *Roadmap* |
-| **4. Application** | `api` | Route handlers, server actions, API contracts | `references/commands/api.md` *(planned)* | ⏳ *Roadmap* |
-| **4. Application** | `app` | App Router, React 19, RSC boundaries, Suspense | `references/commands/app.md` *(planned)* | ⏳ *Roadmap* |
-| **5. Quality** | `test` | Unit, integration, RLS coverage, E2E security tests | `references/commands/test.md` *(planned)* | ⏳ *Roadmap* |
-| **5. Quality** | `observe` | Tracing, tenant-scoped audit logs, health checks | `references/commands/observe.md` *(planned)* | ⏳ *Roadmap* |
-| **6. DevOps** | `deploy` | CI/CD, environments, rollback, point-in-time backups | `references/commands/deploy.md` *(planned)* | ⏳ *Roadmap* |
-| **6. DevOps / Perf** | `perf` | Development performance audit, bottleneck diagnosis, safe perf | `references/commands/perf.md` + 4 workflows + 5 memory modules | ✅ **Built** |
-| **7. Operations** | `incident` | Disaster recovery, tenant leak remediation runbooks | `references/commands/incident.md` *(planned)* | ⏳ *Roadmap* |
-| **7. Operations** | `audit` | Full-stack multi-tenant architecture compliance audit | `references/commands/audit.md` *(planned)* | ⏳ *Roadmap* |
+| **3. Data** | `data` | Schema, migrations, transactions, constraints | `references/workflows/data.md` + `references/memory/decision-points.md` | ✅ **Built** |
+| **3. Data** | `storage` | Tenant-scoped buckets, signed URLs, storage RLS | `references/workflows/storage.md` + `references/memory/cache-storage-rules.md` | ✅ **Built** |
+| **4. Application** | `api` | Route handlers, server actions, API contracts | `references/workflows/api.md` + `client-server-boundaries.md` + `react-perf-rules.md` | ✅ **Built** |
+| **4. Application** | `app` | App Router, React 19, RSC boundaries, Suspense | `references/workflows/app.md` + `client-server-boundaries.md` + `react-perf-rules.md` | ✅ **Built** |
+| **5. Quality** | `test` | Unit, integration, RLS coverage, E2E security tests | `references/workflows/test.md` + `references/memory/quality-bar.md` | ✅ **Built** |
+| **5. Quality** | `observe` | Tracing, tenant-scoped audit logs, health checks | `references/workflows/observe.md` + `references/memory/quality-bar.md` | ✅ **Built** |
+| **6. DevOps** | `deploy` | CI/CD, environments, rollback, point-in-time backups | `references/workflows/deploy.md` + `references/memory/spec.md` | ✅ **Built** |
+| **6. DevOps / Perf** | `perf` | Dev & runtime performance audit, bottleneck diagnosis, safe perf | `references/workflows/audit-dev-perf.md` + `perf-optimization-rules.md` + `react-perf-rules.md` | ✅ **Built** |
+| **7. Operations** | `incident` | Disaster recovery, tenant leak remediation runbooks | `references/workflows/incident.md` + `references/memory/spec.md` | ✅ **Built** |
+| **7. Operations** | `audit` | Full-stack multi-tenant architecture compliance audit | `references/workflows/audit.md` + `references/memory/quality-bar.md` | ✅ **Built** |
 
 ---
 

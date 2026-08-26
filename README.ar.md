@@ -11,7 +11,7 @@
 [![Next.js 16 Ready](https://img.shields.io/badge/Next.js-16%20App%20Router-black.svg?style=for-the-badge)](#-معمارية-المنظومة-والمكدس-التقني)
 [![Architect Score](https://img.shields.io/badge/Architect%20Score-8%2F8%20Pass%20(100%25)-green.svg?style=for-the-badge)](#-منهجية-tidyfactor-وحوكمة-الامتثال-88-pass)
 
-[✨ موقع الوكالة](https://alwkala.com) • [🔒 عزل المستأجرين](#-نموذج-عزل-المستأجرين-الصارم-locked-tenant-isolation) • [⚡ دورة حياة الأوامر الـ 14](#-دورة-حياة-أوامر-الساس-الـ-14-saas-command-lifecycle) • [🚀 محرك أداء التطوير](#-محرك-أداء-بيئة-التطوير-وتشخيص-عنق-الزجاجة-dev-perf-engine) • [🛡️ سياسات RLS والـ Auth](#%EF%B8%8F-مصفوفة-سياسات-rls-وخطافات-المصادقة) • [📖 English Version](README.md)
+[✨ موقع الوكالة](https://alwkala.com) • [🔒 عزل المستأجرين](#-نموذج-عزل-المستأجرين-الصارم-locked-tenant-isolation) • [⚡ دورة حياة الأوامر الـ 15](#-دورة-حياة-أوامر-الساس-الـ-15-saas-command-lifecycle) • [🚀 محرك أداء التطوير](#-محرك-أداء-بيئة-التطوير-وتشخيص-عنق-الزجاجة-dev-perf-engine) • [🛡️ سياسات RLS والـ Auth](#%EF%B8%8F-مصفوفة-سياسات-rls-وخطافات-المصادقة) • [📖 English Version](README.md)
 
 </div>
 
@@ -76,26 +76,27 @@ CREATE POLICY "organizations_tenant_isolation_delete" ON public.organizations
 
 ---
 
-## ⚡ دورة حياة أوامر الساس الـ 14 (SaaS Command Lifecycle)
+## ⚡ دورة حياة أوامر الساس الـ 15 (SaaS Command Lifecycle)
 
-تغطي المهارة كافة مراحل بناء منصات الساس عبر 14 أمراً تخصصياً:
+تغطي المهارة كافة مراحل بناء منصات الساس عبر 15 أمراً تخصصياً مكتملاً بنسبة 100%:
 
 | المرحلة | الأمر | نية واستخدام الأمر | ما يتم تحميله في الذاكرة | الحالة |
 |---|---|---|---|:---:|
+| **0. الاكتشاف** | `brief` | المقابلة الاستكشافية وتثبيت الخيارات المعمارية في كاش المشروع | `references/workflows/brief.md` + `decision-points.md` + `quality-bar.md` | ✅ **مكتمل** |
 | **1. التأسيس** | `init` | توليد مشروع ساس جديد وتوثيق المعمارية في `ARCHITECTURE.md` | `references/workflows/init.md` + `spec.md` + `architecture-doc-skeleton.md` | ✅ **مكتمل** |
 | **1. التأسيس** | `tenant` | حل هوية المستأجرين وسياق الـ Edge ودورة حياتهم | `references/workflows/tenant.md` + `references/memory/spec.md` | ✅ **مكتمل** |
 | **2. الأمان** | `rls` | كتابة سياسات RLS بنمط السياسات الأربعة وتدقيق التسريب | `references/workflows/rls.md` + `spec.md` + `rls-patterns.md` | ✅ **مكتمل** |
 | **2. الأمان** | `auth` | ضبط المصادقة وخطاف JWT والصلاحيات (RBAC/ABAC) | `references/workflows/auth.md` + `spec.md` + `auth-patterns.md` | ✅ **مكتمل** |
-| **3. البيانات** | `data` | المخططات والـ Migrations والمعاملات والقيود | `references/commands/data.md` *(قيد التخطيط)* | ⏳ *قيد التطوير* |
-| **3. البيانات** | `storage` | حاويات الملفات والروابط الموقعة المعزولة للمستأجر | `references/commands/storage.md` *(قيد التخطيط)* | ⏳ *قيد التطوير* |
-| **4. التطبيق** | `api` | مسارات الـ Route Handlers والـ Server Actions والعقود | `references/commands/api.md` *(قيد التخطيط)* | ⏳ *قيد التطوير* |
-| **4. التطبيق** | `app` | معمارية App Router و React 19 والـ RSC والـ Suspense | `references/commands/app.md` *(قيد التخطيط)* | ⏳ *قيد التطوير* |
-| **5. الجودة** | `test` | اختبارات الوحدة وسياسات RLS والأمان والتكامل | `references/commands/test.md` *(قيد التخطيط)* | ⏳ *قيد التطوير* |
-| **5. الجودة** | `observe` | تتبع السجلات والتدقيق المعزول وفحص الصحة | `references/commands/observe.md` *(قيد التخطيط)* | ⏳ *قيد التطوير* |
-| **6. التشغيل** | `deploy` | النشر والبيئات والنسخ الاحتياطي اللحظي والـ Rollback | `references/commands/deploy.md` *(قيد التخطيط)* | ⏳ *قيد التطوير* |
-| **6. التشغيل والأداء** | `perf` | تدقيق وتحسين أداء التطوير وتشخيص عنق الزجاجة وتطبيق التحسينات الآمنة والقياس | `references/commands/perf.md` + 4 مسارات عمل + 5 ملفات مرجعية | ✅ **مكتمل** |
-| **7. الطوارئ** | `incident` | خطط التعافي من الكوارث ومعالجة التسريب البرمجي | `references/commands/incident.md` *(قيد التخطيط)* | ⏳ *قيد التطوير* |
-| **7. الطوارئ** | `audit` | التدقيق المعماري الشامل والامتثال لمنصات الساس | `references/commands/audit.md` *(قيد التخطيط)* | ⏳ *قيد التطوير* |
+| **3. البيانات** | `data` | المخططات والـ Migrations والمعاملات والقيود | `references/workflows/data.md` + `references/memory/decision-points.md` | ✅ **مكتمل** |
+| **3. البيانات** | `storage` | حاويات الملفات والروابط الموقعة المعزولة للمستأجر | `references/workflows/storage.md` + `references/memory/cache-storage-rules.md` | ✅ **مكتمل** |
+| **4. التطبيق** | `api` | مسارات الـ Route Handlers والـ Server Actions والعقود | `references/workflows/api.md` + `client-server-boundaries.md` + `react-perf-rules.md` | ✅ **مكتمل** |
+| **4. التطبيق** | `app` | معمارية App Router و React 19 والـ RSC والـ Suspense | `references/workflows/app.md` + `client-server-boundaries.md` + `react-perf-rules.md` | ✅ **مكتمل** |
+| **5. الجودة** | `test` | اختبارات الوحدة وسياسات RLS والأمان والتكامل | `references/workflows/test.md` + `references/memory/quality-bar.md` | ✅ **مكتمل** |
+| **5. الجودة** | `observe` | تتبع السجلات والتدقيق المعزول وفحص الصحة | `references/workflows/observe.md` + `references/memory/quality-bar.md` | ✅ **مكتمل** |
+| **6. التشغيل** | `deploy` | النشر والبيئات والنسخ الاحتياطي اللحظي والـ Rollback | `references/workflows/deploy.md` + `references/memory/spec.md` | ✅ **مكتمل** |
+| **6. التشغيل والأداء** | `perf` | تدقيق وتحسين أداء التطوير وتشغيل الـ React وقواعد فرسل | `references/workflows/audit-dev-perf.md` + `perf-optimization-rules.md` + `react-perf-rules.md` | ✅ **مكتمل** |
+| **7. الطوارئ** | `incident` | خطط التعافي من الكوارث ومعالجة التسريب البرمجي | `references/workflows/incident.md` + `references/memory/spec.md` | ✅ **مكتمل** |
+| **7. الطوارئ** | `audit` | التدقيق المعماري الشامل والامتثال لمنصات الساس | `references/workflows/audit.md` + `references/memory/quality-bar.md` | ✅ **مكتمل** |
 
 ---
 

@@ -4,26 +4,27 @@ Production-grade **Multi-Tenant SaaS Architecture & Development Resource Optimiz
 
 ---
 
-## ⚡ Skill & 14-Stage SaaS Command Dispatchers
+## ⚡ Skill & 15-Stage SaaS Command Dispatchers
 
-This project exposes an Agentic Skill under `SKILL.md` (and `.claude-skill/SKILL.md`). The following 14 command modules covering the complete SaaS engineering lifecycle are defined:
+This project exposes an Agentic Skill under `SKILL.md` (and `.claude-skill/SKILL.md`). The following 15 command modules covering the complete SaaS engineering lifecycle are fully implemented:
 
 | Stage | Command | Purpose | Reference Spec | Status |
 |---|---|---|---|:---:|
+| **0. Discovery** | `brief` | Pre-flight CDL SaaS discovery & stack selection | `references/commands/brief.md` | ✅ **Built** |
 | **1. Foundation** | `init` | Scaffold new multi-tenant project & generate `ARCHITECTURE.md` | `references/commands/init.md` | ✅ **Built** |
 | **1. Foundation** | `tenant` | Edge tenant resolution, context propagation, lifecycle | `references/commands/tenant.md` | ✅ **Built** |
 | **2. Security** | `rls` | RLS policy authoring, 4-policy pattern, leak diagnosis | `references/commands/rls.md` | ✅ **Built** |
 | **2. Security** | `auth` | Supabase Auth, custom JWT claims hook, RBAC/ABAC | `references/commands/auth.md` | ✅ **Built** |
-| **3. Data** | `data` | Schema, migrations, transactions, constraints | `references/commands/data.md` | ⏳ *Roadmap* |
-| **3. Data** | `storage` | Tenant-scoped buckets, signed URLs, storage RLS | `references/commands/storage.md` | ⏳ *Roadmap* |
-| **4. Application** | `api` | Route handlers, server actions, API contracts | `references/commands/api.md` | ⏳ *Roadmap* |
-| **4. Application** | `app` | App Router, React 19, RSC boundaries, Suspense | `references/commands/app.md` | ⏳ *Roadmap* |
-| **5. Quality** | `test` | Unit, integration, RLS coverage, E2E security tests | `references/commands/test.md` | ⏳ *Roadmap* |
-| **5. Quality** | `observe` | Tracing, tenant-scoped audit logs, health checks | `references/commands/observe.md` | ⏳ *Roadmap* |
-| **6. DevOps** | `deploy` | CI/CD, environments, rollback, point-in-time backups | `references/commands/deploy.md` | ⏳ *Roadmap* |
-| **6. DevOps / Perf** | `perf` | Dev performance audit, bottleneck diagnosis, safe perf | `references/commands/perf.md` | ✅ **Built** |
-| **7. Operations** | `incident` | Disaster recovery, tenant leak remediation runbooks | `references/commands/incident.md` | ⏳ *Roadmap* |
-| **7. Operations** | `audit` | Full-stack multi-tenant architecture & compliance audit | `references/commands/audit.md` | ⏳ *Roadmap* |
+| **3. Data** | `data` | Schema, migrations, transactions, constraints | `references/commands/data.md` | ✅ **Built** |
+| **3. Data** | `storage` | Tenant-scoped buckets, signed URLs, storage RLS | `references/commands/storage.md` | ✅ **Built** |
+| **4. Application** | `api` | Route handlers, server actions, API contracts | `references/commands/api.md` | ✅ **Built** |
+| **4. Application** | `app` | App Router, React 19, RSC boundaries, Suspense | `references/commands/app.md` | ✅ **Built** |
+| **5. Quality** | `test` | Unit, integration, RLS coverage, E2E security tests | `references/commands/test.md` | ✅ **Built** |
+| **5. Quality** | `observe` | Tracing, tenant-scoped audit logs, health checks | `references/commands/observe.md` | ✅ **Built** |
+| **6. DevOps** | `deploy` | CI/CD, environments, rollback, point-in-time backups | `references/commands/deploy.md` | ✅ **Built** |
+| **6. DevOps / Perf** | `perf` | Dev & runtime performance audit, bottleneck diagnosis, safe perf | `references/commands/perf.md` | ✅ **Built** |
+| **7. Operations** | `incident` | Disaster recovery, tenant leak remediation runbooks | `references/commands/incident.md` | ✅ **Built** |
+| **7. Operations** | `audit` | Full-stack multi-tenant architecture & compliance audit | `references/commands/audit.md` | ✅ **Built** |
 
 ---
 
