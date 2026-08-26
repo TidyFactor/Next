@@ -1,6 +1,6 @@
 {
   "name": "@alwkala/tidyfactor-next",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "TidyFactor Next.js track — production-grade multi-tenant SaaS on Next.js 16, React 19, TypeScript strict, and Supabase with CDL Contextual Decision Layer",
   "main": "SKILL.md",
   "bin": {

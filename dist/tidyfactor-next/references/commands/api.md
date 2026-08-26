@@ -4,6 +4,8 @@ Authors type-safe App Router Route Handlers and Next.js 16 Server Actions with t
 
 ## Loads
 - `references/workflows/api.md`
+- `references/memory/client-server-boundaries.md`
+- `references/memory/react-perf-rules.md`
 - `references/memory/decision-points.md`
 - `references/memory/quality-bar.md`
 - `references/memory/spec.md`

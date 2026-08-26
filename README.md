@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ TidyFactor Next.js `v1.1.0`
+# ⚡ TidyFactor Next.js `v1.3.0`
 ### Production-Grade Multi-Tenant SaaS Architecture & Development Performance Engine
 
 **The official multi-tenant architecture and performance optimization track for Next.js 16, React 19, TypeScript Strict, and Supabase within the TidyFactor Ecosystem.**

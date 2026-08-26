@@ -5,6 +5,23 @@ All notable changes to the **[@alwkala/tidyfactor-next](https://www.npmjs.com/pa
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-08-27
+
+### Added
+- **8-Tier Prioritized React 19 & Next.js 16 Runtime Performance Catalog**: Added `references/memory/react-perf-rules.md` encapsulating 40+ production rules learned from Vercel Engineering (`react-best-practices`):
+  - **Tier 1 (CRITICAL — Waterfalls)**: Synchronous guard evaluation before `await`, deferred `await`, `Promise.all` / dependency parallelization, route handler early promise execution, `<Suspense>` streaming boundaries.
+  - **Tier 2 (CRITICAL — Bundle Size)**: Barrel import elimination, `next/dynamic` for heavy client modules, deferred 3rd-party scripts past hydration, intent-based chunk preloading.
+  - **Tier 3 (HIGH — Server Performance)**: `React.cache()` request deduplication, Next.js 16 `after()` for non-blocking telemetry and audit logs, minimal RSC props serialization DTOs, Server Action auth parity.
+  - **Tier 4 (MEDIUM-HIGH — Client Data Fetching)**: SWR / TanStack request deduplication, passive scroll event listeners.
+  - **Tier 5 (MEDIUM — Re-render Optimization)**: Pure derived state in render phase (zero redundant `useEffect` mirrors), primitive `useMemo` prevention, lazy `useState` initializers, `startTransition` / `useDeferredValue`.
+  - **Tier 6 (MEDIUM — Rendering Performance)**: CSS `content-visibility: auto`, static JSX hoisting, explicit boolean conditions.
+  - **Tier 7 (LOW-MEDIUM — JavaScript Performance)**: Layout thrashing batching, `Set`/`Map` $O(1)$ lookups, `toSorted()` immutability.
+  - **Tier 8 (LOW — Advanced Patterns)**: `useEffectEvent` non-reactive callbacks, single app initialization pattern.
+- **App Router & API Workflow Upgrades**: Updated `references/workflows/app.md` and `references/workflows/api.md` with runtime performance checklists.
+- **7-Axis Quality Gate Hardening**: Upgraded Axis V (Velocity & Performance) and Axis H (Hierarchy & Boundary Clarity) in `references/memory/quality-bar.md`.
+
+---
+
 ## [1.2.0] - 2026-08-25
 
 ### Added

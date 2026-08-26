@@ -103,6 +103,7 @@ Status:      CURRENT | STALE | PARTIAL (lightweight)
 
 **Always loaded with this command:**
 - `../memory/perf-optimization-rules.md` — 14-phase diagnostic anchors, bottleneck models, 120-pt scoring rubric
+- `../memory/react-perf-rules.md` — 8-tier prioritized React 19 / Next.js 16 runtime performance catalog
 - `../memory/safe-optimizations-catalog.md` — Green / Yellow / Red taxonomy + SaaS Safety Boundary
 
 **Loaded based on mode:**

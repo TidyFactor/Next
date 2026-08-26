@@ -1,8 +1,7 @@
 ---
 name: tidyfactor-next
-description: "TidyFactor Next.js track — production-grade multi-tenant SaaS on Next.js 16, React 19, TypeScript strict, and Supabase with Contextual Decision Layer (CDL). Features locked tenant isolation (shared schema, tenant_id + Postgres RLS) and pluggable query layer (Supabase JS, Drizzle, Prisma). Trigger on commands 'brief', 'init', 'tenant', 'rls', 'auth', 'data', 'storage', 'api', 'app', 'test', 'observe', 'deploy', 'perf', 'incident', 'audit', or requests like 'build a multi-tenant SaaS', 'add RLS to this table', 'tenant resolution', 'audit tenant isolation'. Anti-triggers: Do NOT use for single-tenant static sites or non-Next.js backends."
+description: "Production multi-tenant SaaS engine on Next.js 16, React 19, TypeScript strict, and Supabase with Contextual Decision Layer (CDL). Features locked tenant isolation (tenant_id + Postgres RLS) and pluggable query layer. Trigger on commands 'brief', 'init', 'tenant', 'rls', 'auth', 'data', 'storage', 'api', 'app', 'test', 'observe', 'deploy', or requests to build a multi-tenant SaaS."
 ---
-
 # TidyFactor Next.js
 
 A command dispatcher for production multi-tenant SaaS on Next.js 16 and Supabase. This router declares commands and workflows without performing execution directly.
@@ -18,12 +17,12 @@ A command dispatcher for production multi-tenant SaaS on Next.js 16 and Supabase
 | Auth, RBAC/ABAC | `references/commands/auth.md` | `workflows/auth.md` + `memory/auth-patterns.md` |
 | Schema, migrations, transactions, constraints | `references/commands/data.md` | `workflows/data.md` + `memory/decision-points.md` |
 | Buckets, signed URLs, tenant-scoped storage paths | `references/commands/storage.md` | `workflows/storage.md` + `memory/cache-storage-rules.md` |
-| Route handlers, server actions, API contracts | `references/commands/api.md` | `workflows/api.md` + `memory/client-server-boundaries.md` |
-| App Router / React 19 patterns, RSC boundaries | `references/commands/app.md` | `workflows/app.md` + `memory/client-server-boundaries.md` |
+| Route handlers, server actions, API contracts | `references/commands/api.md` | `workflows/api.md` + `memory/client-server-boundaries.md` + `memory/react-perf-rules.md` |
+| App Router / React 19 patterns, RSC boundaries | `references/commands/app.md` | `workflows/app.md` + `memory/client-server-boundaries.md` + `memory/react-perf-rules.md` |
 | Unit/integration/RLS/E2E/security tests | `references/commands/test.md` | `workflows/test.md` + `memory/quality-bar.md` |
 | Logging, tracing, audit logs, health checks | `references/commands/observe.md` | `workflows/observe.md` + `memory/quality-bar.md` |
 | CI/CD, environments, secrets, rollback, backups | `references/commands/deploy.md` | `workflows/deploy.md` + `memory/spec.md` |
-| Dev performance: slow startup, HMR, RAM usage, imports | `references/commands/perf.md` | `workflows/audit-dev-perf.md` + `memory/perf-optimization-rules.md` |
+| Dev & Runtime performance: waterfalls, bundles, RAM, HMR | `references/commands/perf.md` | `workflows/audit-dev-perf.md` + `memory/perf-optimization-rules.md` + `memory/react-perf-rules.md` |
 | Failure modes, retries, DR, recovery runbooks | `references/commands/incident.md` | `workflows/incident.md` + `memory/spec.md` |
 | Structural/architecture audit of the whole project | `references/commands/audit.md` | `workflows/audit.md` + `memory/quality-bar.md` |
 
