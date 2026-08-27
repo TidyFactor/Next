@@ -16,7 +16,7 @@
 <br/><br/>
 
 <p align="center">
-  <img src="assets/demo-hero-dark.png" alt="TidyFactor Next.js Architecture Engine Showcase" width="100%" />
+  <img src="assets/hero-banner.png" alt="TidyFactor Next.js Architecture Engine Showcase" width="100%" />
 </p>
 
 </div>

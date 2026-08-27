@@ -16,7 +16,7 @@ Give **Google Antigravity, Claude Code, Cursor, OpenAI Codex, or Windsurf** a lo
 <br/><br/>
 
 <p align="center">
-  <img src="assets/demo-hero-dark.png" alt="TidyFactor Next.js Architecture Engine Showcase" width="100%" />
+  <img src="assets/hero-banner.png" alt="TidyFactor Next.js Hero Banner" width="100%" />
 </p>
 
 </div>
