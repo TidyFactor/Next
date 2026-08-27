@@ -1,26 +1,85 @@
 <div align="center">
 
 # ⚡ TidyFactor Next.js `v1.3.0`
-### Production-Grade Multi-Tenant SaaS Architecture & Development Performance Engine
+### The Production-Grade Multi-Tenant SaaS Architecture & Performance Skill for AI Coding Agents
 
-**The official multi-tenant architecture and performance optimization track for Next.js 16, React 19, TypeScript Strict, and Supabase within the TidyFactor Ecosystem.**
+Give **Google Antigravity, Claude Code, Cursor, OpenAI Codex, or Windsurf** a locked, security-first architecture for **Next.js 16 + React 19 + Supabase** — so your agent stops improvising tenant isolation and starts enforcing it.
 
 [![npm version](https://img.shields.io/npm/v/@alwkala/tidyfactor-next.svg?style=for-the-badge&color=000000)](https://www.npmjs.com/package/@alwkala/tidyfactor-next)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=for-the-badge)](LICENSE)
 [![Tenant Isolation](https://img.shields.io/badge/Tenant%20Isolation-Postgres%20RLS-3ECF8E.svg?style=for-the-badge)](#-locked-tenant-isolation-model)
-[![Next.js 16 Ready](https://img.shields.io/badge/Next.js-16%20App%20Router-black.svg?style=for-the-badge)](#-platform-stack--architecture)
-[![Architect Score](https://img.shields.io/badge/Architect%20Score-8%2F8%20Pass%20(100%25)-green.svg?style=for-the-badge)](#-tidyfactor-skill-methodology--governance)
+[![Next.js 16 Ready](https://img.shields.io/badge/Next.js-16%20App%20Router-black.svg?style=for-the-badge)](#-why-tidyfactornext)
+[![Architect Score](https://img.shields.io/badge/Architect%20Score-8%2F8%20Pass%20(100%25)-green.svg?style=for-the-badge)](#%EF%B8%8F-tidyfactor-skill-methodology--governance)
 
-[✨ Ecosystem Hub](https://alwkala.com) • [🔒 Tenant Isolation](#-locked-tenant-isolation-model) • [⚡ 15-Stage Lifecycle](#-15-stage-saas-command-lifecycle) • [🚀 Dev-Perf Engine](#-development-performance--resource-optimization-engine) • [🛡️ RLS & Auth Patterns](#%EF%B8%8F-rls-policy-matrix--auth-hooks) • [📖 بالعربية](README.ar.md)
+[🚀 Quick Start](#-quick-start) • [🎯 Why TidyFactor/Next](#-why-tidyfactornext) • [🔒 Tenant Isolation](#-locked-tenant-isolation-model) • [⚡ 15-Stage Lifecycle](#-15-stage-saas-command-lifecycle) • [🚀 Perf Engine](#-performance--optimization-engine) • [❓ FAQ](#-faq) • [📖 بالعربية](README.ar.md)
 
 </div>
 
 ---
 
-> [!IMPORTANT]
-> **TidyFactor Next.js** is an opinionated, production-grade architectural framework for AI Coding Agents (*Google Antigravity, Claude Code, Cursor, Codex, Windsurf*) and senior fullstack engineers. It enforces **unbreakable tenant isolation** on Next.js 16 and Supabase using PostgreSQL Row Level Security (RLS) as the hard security boundary—blocking data leaks, multi-tenant contamination, and unauthorized cross-tenant access from day one.
->
-> In addition, it integrates an **Evidence-Based Development Performance Engine** that diagnoses development environment bottlenecks (RAM pressure, Disk I/O, Dependency Graph, TypeScript scope, File Watch boundaries) and applies verified safe optimizations with before/after DELTA benchmarks.
+## 📚 Table of Contents
+
+- [🎯 Why TidyFactor/Next](#-why-tidyfactornext)
+- [🚀 Quick Start](#-quick-start)
+- [🌟 Architectural Value Proposition](#-architectural-value-proposition)
+- [🔒 Locked Tenant Isolation Model](#-locked-tenant-isolation-model)
+- [⚡ 15-Stage SaaS Command Lifecycle](#-15-stage-saas-command-lifecycle)
+- [🚀 Performance & Optimization Engine](#-performance--optimization-engine)
+  - [1. 8-Tier Runtime Performance Rules (Vercel Engineering)](#1-8-tier-runtime-performance-rules-vercel-engineering)
+  - [2. Development Environment Resource Diagnostics](#2-development-environment-resource-diagnostics)
+  - [3. Optimization Safety Tiers (Green / Yellow / Red)](#3-optimization-safety-tiers-green--yellow--red)
+- [🛡️ RLS Policy Matrix & Auth Hooks](#%EF%B8%8F-rls-policy-matrix--auth-hooks)
+- [📋 Project Memory & ARCHITECTURE.md](#-project-memory--architecturemd)
+- [❓ FAQ](#-faq)
+- [🏛️ The TidyFactor Ecosystem](#%EF%B8%8F-the-tidyfactor-ecosystem)
+- [🏛️ TidyFactor Skill Methodology & Governance](#%EF%B8%8F-tidyfactor-skill-methodology--governance)
+- [🤝 Contributing](#-contributing)
+- [👨‍💻 Support](#-support)
+- [📜 License](#-license)
+
+---
+
+## 🎯 Why TidyFactor/Next
+
+Most Next.js agent skills teach your AI how to write idiomatic code — App Router conventions, caching APIs, and bundle-size tweaks. That is necessary, but it does **not** stop an agent from shipping a query that accidentally leaks Tenant A's data into Tenant B's dashboard.
+
+**TidyFactor/Next sits one layer deeper: it is an architecture and hard security contract, not just a style guide.**
+
+| Dimension | Generic Next.js Skills | `tidyfactor-next` |
+|---|---|---|
+| **What it teaches** | Idiomatic App Router, React 19 RSC boundaries, caching | Multi-tenant architecture + non-negotiable Postgres RLS boundary |
+| **Scope** | **Breadth**: Many small, composable coding snippets | **Depth**: One vertical (multi-tenant SaaS), owned end-to-end |
+| **Failure mode prevented** | Slow client components, suboptimal bundles | Cross-tenant data leaks, forgotten `WHERE tenant_id = ...` clauses |
+| **Performance scope** | Basic production advice | **Dual engine**: 8 runtime optimization tiers + 6 dev-environment bottleneck models |
+| **Governance score** | Unverified | **100% Architect Score** (passes all TidyFactor Skill Architect rules) |
+| **Use together?** | ✅ | ✅ — Install both; they complement each other perfectly |
+
+> [!TIP]
+> If you are building a SaaS where a cross-tenant data leak means a lawsuit, **`tidyfactor-next` is the foundational guardrail layer your AI agent needs** in addition to general React best practices.
+
+---
+
+## 🚀 Quick Start
+
+### 1. Interactive Project Wizard & Direct Injection
+
+```bash
+# Interactive project wizard — scaffolds a new multi-tenant SaaS project
+npx @alwkala/tidyfactor-next
+
+# Or inject the skill directly into an existing Next.js repository
+npx @alwkala/tidyfactor-next add-skill
+```
+
+### 2. Workspace Installation per AI Agent
+
+| AI Agent | Workspace Skill Path |
+|---|---|
+| **Google Antigravity** | `.agents/skills/tidyfactor-next/` or global `~/.gemini/config/skills/` |
+| **Claude Code** | `.claude-skill/skills/tidyfactor-next/` |
+| **Cursor / Codex / Windsurf** | `.agents/skills/tidyfactor-next/` |
+
+Once installed, invoke `/init` or `/brief` inside your AI agent to discover project baselines and scaffold your `ARCHITECTURE.md` single source of truth!
 
 ---
 
@@ -39,9 +98,9 @@ graph TD
 
 | For Fullstack Engineers | For SaaS Founders & CTOs | For AI Coding Agents |
 |---|---|---|
-| **Locked Tenant Isolation**: Shared schema with `tenant_id` + Postgres RLS. No complex schema-per-tenant migrations or multi-DB connection pooling hell. | **Zero Data-Leak Guarantee**: Hard security boundary at the database layer; application bugs cannot expose Tenant A's data to Tenant B. | **Context-Efficient Dispatcher**: Lightweight `SKILL.md` router loads only ~350 tokens at start, injecting domain memory only on demand. |
-| **Pluggable Query Layer**: Choose Supabase JS client, Drizzle ORM, or Prisma once during `init`. All downstream code adheres strictly to your choice. | **Custom JWT Access Token Hook**: Injects verified `tenant_id` and `role` server-side at token issuance—never trusted from client input. | **Deterministic Workflows**: Every command runs against a strict, quantifiable validation checklist before shipping. |
-| **Fail-Closed Resolution**: Edge middleware resolves tenant via subdomain, custom domain, or session claim, failing closed (404/403) on error. | **Zero Lock-in Architecture**: Pure Next.js App Router and PostgreSQL standards with zero black-box vendor runtime dependencies. | **100% Architect Score**: Fully compliant (8/8) with the official TidyFactor Skill Architect governance specification. |
+| **Locked Tenant Isolation**: Shared schema with `tenant_id` + Postgres RLS. No schema-per-tenant migration hell or multi-DB connection pooling chaos. | **Zero Data-Leak Guarantee**: Hard security boundary at the database layer; application bugs cannot expose Tenant A's records to Tenant B. | **Context-Efficient Dispatcher**: Lightweight `SKILL.md` router loads only ~350 tokens at start, pulling memory only on demand. |
+| **Pluggable Query Layer**: Choose Supabase JS, Drizzle ORM, or Prisma once during `init`. All downstream code adheres strictly to your choice. | **Custom JWT Access Token Hook**: Injects verified `tenant_id` and `role` server-side at token issuance—never trusted from client input. | **Deterministic Workflows**: Every command runs against a strict, quantifiable validation checklist before shipping. |
+| **Fail-Closed Resolution**: Edge middleware resolves tenant via subdomain, custom domain, or session claim, failing closed (404/403) on error. | **Zero Lock-in Architecture**: Pure Next.js App Router and PostgreSQL standards with zero black-box vendor runtime dependencies. | **100% Governance Compliance**: Fully compliant (8/8) with the official TidyFactor Skill Architect governance specification. |
 | **Evidence-Based Perf Engine**: Diagnoses RAM, CPU, and Disk bottlenecks before touching code; benchmark-backed DELTA verification. | **Predictable Infrastructure Cost**: Identifies bloated client bundles and server secret leaks before deployment. | **SaaS Safety Boundary**: Automatically prohibits performance optimizations that weaken RLS or tenant isolation. |
 
 ---
@@ -78,7 +137,7 @@ CREATE POLICY "organizations_tenant_isolation_delete" ON public.organizations
 
 ## ⚡ 15-Stage SaaS Command Lifecycle
 
-The entire SaaS engineering lifecycle is structured into 15 deterministic commands with 100% operational coverage:
+The entire SaaS engineering lifecycle is structured into 15 deterministic commands with **100% operational coverage**:
 
 | Stage | Command | User Intent | What It Loads | Status |
 |---|---|---|---|:---:|
@@ -100,48 +159,32 @@ The entire SaaS engineering lifecycle is structured into 15 deterministic comman
 
 ---
 
-## 🚀 Development Performance & Resource Optimization Engine
+## 🚀 Performance & Optimization Engine
 
-Unlike generic performance advice that focuses solely on Web Vitals or production latency, the `perf` track tackles **development environment friction**: slow dev server startups, sluggish HMR, excessive RAM consumption, and disk I/O bottlenecks.
+### 1. 8-Tier Runtime Performance Rules (Vercel Engineering)
 
-```
-                 Development Environment
-                         │
-        ┌────────────────┼────────────────┐
-        ↓                ↓                ↓
-      Memory           CPU            Storage I/O
-        │                │                │
-        └────────────────┼────────────────┘
-                         ↓
-              Development Toolchain
-                         │
-        ┌────────────────┼────────────────┐
-        ↓                ↓                ↓
-   Dependencies      TypeScript        Bundler
-        ↓                ↓                ↓
-     Imports           ESLint           Cache
-        └────────────────┼────────────────┘
-                         ↓
-               Developer Experience
-```
+`tidyfactor-next` encapsulates 40+ runtime optimization rules categorized into 8 impact-ranked tiers (`references/memory/react-perf-rules.md`):
 
-### 1. Phase 0 Mode Detection & Intent Routing
-Before touching a single line of code, the engine identifies developer intent:
-- `AUDIT` → 13-Phase comprehensive inspection with a 120-point scorecard.
-- `DIAGNOSE` → Bottleneck isolation using 6 causality models.
-- `OPTIMIZE` → Automated execution of 🟢 Green-tier optimizations with DELTA tracking.
-- `BENCHMARK` → Cold & warm 3-run median measurement.
-- `REPORT` → Status inspection with automated staleness checking.
+1. **Tier 1: Eliminating Waterfalls (`async-*`) [CRITICAL]**: Check synchronous conditions before `await`, defer `await` to consuming branches, parallelize independent queries with `Promise.all()`, stream async subtrees with `<Suspense>`.
+2. **Tier 2: Bundle Size Optimization (`bundle-*`) [CRITICAL]**: Avoid barrel files, configure `optimizePackageImports`, lazy-load heavy widgets with `next/dynamic({ ssr: false })`, defer 3rd-party scripts.
+3. **Tier 3: Server-Side Performance (`server-*`) [HIGH]**: Wrap per-request data fetchers with `React.cache()`, offload non-blocking telemetry and audit logs to Next.js 16 `after()`, pass only minimal serialized DTOs across the RSC $\to$ RCC boundary.
+4. **Tier 4: Client-Side Data Fetching (`client-*`) [MEDIUM-HIGH]**: SWR / TanStack Query automatic deduplication, passive scroll listeners.
+5. **Tier 5: Re-render Optimization (`rerender-*`) [MEDIUM]**: Pure derived state in render (never synchronize via `useEffect`), avoid `useMemo` on cheap primitives, lazy `useState` initializers, `startTransition` / `useDeferredValue`.
+6. **Tier 6: Rendering Performance (`rendering-*`) [MEDIUM]**: CSS `content-visibility: auto`, hoist static JSX elements outside render, use explicit conditionals.
+7. **Tier 7: JavaScript Performance (`js-*`) [LOW-MEDIUM]**: Layout thrashing prevention (batch DOM read/write), `Set`/`Map` $O(1)$ lookups, `toSorted()` immutability.
+8. **Tier 8: Advanced React Patterns (`advanced-*`) [LOW]**: Extract non-reactive callback logic with `useEffectEvent`, single-mount app initialization.
 
-### 2. The 6 Bottleneck Causality Models
-- **Model A (RAM Pressure → Disk I/O)**: Memory saturation causes OS swapping to pagefile, degrading HMR and IDE responsiveness.
-- **Model B (Large Dependency Graph → CPU/RAM)**: Massive module surfaces cause slow cold starts and heavy type checking.
-- **Model C (Slow Storage → Cache I/O)**: Next.js `.next/cache` I/O bottlenecks on slower drives (disabling cache is never recommended).
-- **Model D (TypeScript Scope Overreach)**: Broad `include` scopes forcing TypeScript to analyze generated or cache files.
-- **Model E (ESLint / Tooling Overhead)**: `typeChecked` rules running across entire codebases without caching.
-- **Model F (Watch Boundary Overflow)**: Thousands of media uploads/generated files monitored by the file watcher inside the dev tree.
+### 2. Development Environment Resource Diagnostics
 
-### 3. Optimization Classification Taxonomy
+Tackles dev-server startup slowness, sluggish HMR, RAM bloat, and disk I/O through **6 Causality Models**:
+- **Model A (RAM Pressure → Disk I/O)**: Memory saturation causing OS paging to swap.
+- **Model B (Large Dependency Graph → CPU/RAM)**: Massive module trees slowing cold starts.
+- **Model C (Slow Storage → Cache I/O)**: `.next/cache` I/O bottlenecks.
+- **Model D (TypeScript Scope Overreach)**: Wide `include` scopes analyzing generated or test files.
+- **Model E (ESLint / Tooling Overhead)**: `typeChecked` rules running without caching.
+- **Model F (Watch Boundary Overflow)**: Thousands of media uploads monitored by file watchers.
+
+### 3. Optimization Safety Tiers (Green / Yellow / Red)
 
 ```mermaid
 graph TD
@@ -151,15 +194,9 @@ graph TD
     Tier -->|🔴 Red| RedForbidden["🚫 Permanently Forbidden<br/>(DB schema, RLS, Auth, Tenant Isolation)"]
 ```
 
-- **🟢 Green (Safe)**: Unused dependencies removal, `dependencies` vs `devDependencies` correction, `tsconfig.json` scope tightening, `.gitignore` & `watchIgnore` boundary fixes.
-- **🟡 Yellow (Review Required)**: Evidence-based `optimizePackageImports` (applied only with barrel import proof), barrel restructuring, client-to-server component conversion.
-- **🔴 Red (Forbidden)**: Modifying database schema, RLS policies, auth flows, tenant isolation models, or disabling caching globally.
-
-### 4. Benchmark Noise Control Protocol
-Single-run measurements are prone to cache warming and background process noise. The engine mandates:
-- **Cold vs. Warm Separation**: Explicit distinction between worst-case cold starts and daily warm restarts.
-- **3-Run Median**: Measuring 3 consecutive passes and recording the median.
-- **Noise Threshold Rule**: If $\text{Max} - \text{Min} > 20\%$ of median, measurements are re-tested to avoid false improvement claims.
+- **🟢 Green (Safe)**: Unused dependency cleanup, `dependencies` vs `devDependencies` correction, `tsconfig.json` scope tightening, `.gitignore` & `watchIgnore` fixes.
+- **🟡 Yellow (Review Required)**: Evidence-based `optimizePackageImports`, barrel import restructuring, client-to-server component conversion.
+- **🔴 Red (Permanently Forbidden)**: Modifying database schema, RLS policies, auth flows, tenant isolation models, or globally disabling caching.
 
 ---
 
@@ -208,7 +245,7 @@ $$;
 
 ## 📋 Project Memory & `ARCHITECTURE.md`
 
-During `init`, the skill generates an `ARCHITECTURE.md` file in the project root. This document serves as the **Single Source of Truth** for architectural decisions across agent sessions:
+During `/init`, the skill generates an `ARCHITECTURE.md` file in your project root. This document serves as the **Single Source of Truth** for architectural decisions across AI agent sessions:
 - **Locked Platform Choices**: App Router, React 19, TypeScript strict, Postgres RLS.
 - **Chosen Once Decisions**: Query layer (Supabase JS, Drizzle, Prisma), tenant resolution strategy, auth provider, role model.
 - **Performance Context**: Known bottlenecks, storage strategy, active baseline, last audit timestamp & git commit SHA.
@@ -217,50 +254,41 @@ During `init`, the skill generates an `ARCHITECTURE.md` file in the project root
 
 ---
 
-## 🚀 Installation & Agent Workspace Setup
+## ❓ FAQ
 
-### 1. Interactive Project Wizard
+<details>
+<summary><b>Does this replace generic Next.js skills like <code>react-best-practices</code>?</b></summary>
+<br/>
+<b>No — use both.</b> <code>tidyfactor-next</code> governs multi-tenant architecture, data isolation, and Postgres RLS security contracts. General best-practice skills focus on general React idioms and client-side styling. They do not overlap; <code>tidyfactor-next</code> incorporates runtime optimization rules directly.
+</details>
 
-```bash
-# Launch interactive setup wizard
-npx @alwkala/tidyfactor-next
-```
+<details>
+<summary><b>Which AI coding agents are supported?</b></summary>
+<br/>
+<b>Google Antigravity, Claude Code, Cursor, OpenAI Codex, and Windsurf</b> are all supported with 100% behavioral parity.
+</details>
 
-### 2. Inject Skill into Existing Next.js Repository
+<details>
+<summary><b>Can I use Drizzle ORM or Prisma instead of the Supabase JS client?</b></summary>
+<br/>
+<b>Yes.</b> The query layer is a "chosen-once" decision made during <code>init</code> or <code>brief</code>. All generated schema models, queries, and repositories follow your confirmed choice.
+</details>
 
-```bash
-# Add skill directly to your current project
-npx @alwkala/tidyfactor-next add-skill
-```
+<details>
+<summary><b>What happens if RLS is accidentally disabled on a table?</b></summary>
+<br/>
+By this skill's definition, the system is defective. The <code>/rls</code> and <code>/audit</code> commands include automated leak-audit queries against <code>pg_tables</code> and <code>pg_policies</code> to flag unshielded tables immediately.
+</details>
 
-### 3. Manual Agent Copy
-
-Place the skill into your workspace agents directory:
-- **Google Antigravity:** `.agents/skills/tidyfactor-next/`
-- **Claude Code:** `.claude-skill/skills/tidyfactor-next/`
-- **Cursor / Codex / Windsurf:** `.agents/skills/tidyfactor-next/`
-
----
-
-## 🏛️ TidyFactor Skill Methodology & Governance
-
-`tidyfactor-next` passes all **8 Architectural Governance Rules** under `tidyfactor-skill-architect`:
-
-1. ✅ **Dispatcher Discipline**: `SKILL.md` routes commands without executing tasks (~350 tokens).
-2. ✅ **One Workflow = One Outcome**: Every workflow has a single deliverable with an explicit validation checklist.
-3. ✅ **Operational Memory**: Pure SQL templates, schemas, and architecture rules—zero narrative prose.
-4. ✅ **No Empty Structures**: Clean, flattened architecture without single-file folders.
-5. ✅ **Philosophy Isolation**: Technical execution separated from marketing commentary.
-6. ✅ **Trigger-Justified Growth**: Commands added per verifiable SaaS lifecycle stages.
-7. ✅ **Security & Quality Bar**: Automated RLS coverage queries (`pg_tables`, `pg_policies`) and leak diagnosis.
-8. ✅ **Cross-Platform Parity**: 100% identical behavior across Antigravity, Claude Code, Cursor, and Codex.
+<details>
+<summary><b>How does the Contextual Decision Layer (CDL) work?</b></summary>
+<br/>
+The CDL runs a single-round pre-flight interview via <code>/brief</code> and caches baseline stack choices in <code>.tidyfactor/next-brief.md</code>, allowing downstream commands to execute silently without repeating questions.
+</details>
 
 ---
 
-
----
-
-## 🏛️ TidyFactor Ecosystem Architecture
+## 🏛️ The TidyFactor Ecosystem
 
 **TidyFactor** is a modular web architecture and AI coding agent skill ecosystem built on clear separation of concerns across the product lifecycle:
 
@@ -283,28 +311,14 @@ TidyFactor Organization (github.com/TidyFactor)
     └── Marketing    → Growth / Revenue       (Direct Response, Pillar SEO & Content Lifecycles)
 ```
 
-### 💎 Frontend Triad
-
-```
-                TidyFactor
-                    │
-          ┌─────────┼─────────┐
-          │         │         │
-      Cinematic   Design    Styler
-          │         │         │
-      Experience Prototype Production
-          │         │         │
-       "Wow"      "Build"   "Ship"
-```
-
 ### 📦 Community Package & Skill Parity
 
 | Track | Category | GitHub Repository | Agent Skill | NPM Package |
 | :--- | :--- | :--- | :--- | :--- |
+| **Next** | Development | [`TidyFactor/Next`](https://github.com/TidyFactor/Next) | `tidyfactor-next` | [`@alwkala/tidyfactor-next`](https://www.npmjs.com/package/@alwkala/tidyfactor-next) |
 | **Cinematic** | Design | [`TidyFactor/Cinematic`](https://github.com/TidyFactor/Cinematic) | `tidyfactor-cinematic` | [`@alwkala/create-cinematic-kit`](https://www.npmjs.com/package/@alwkala/create-cinematic-kit) |
 | **Design** | Design | [`TidyFactor/Design`](https://github.com/TidyFactor/Design) | `tidyfactor-design` | [`@alwkala/tidyfactor-design`](https://www.npmjs.com/package/@alwkala/tidyfactor-design) |
 | **Styler** | Design | [`TidyFactor/Styler`](https://github.com/TidyFactor/Styler) | `tidyfactor-styler` | [`@alwkala/tidyfactor-styler`](https://www.npmjs.com/package/@alwkala/tidyfactor-styler) |
-| **Next** | Development | [`TidyFactor/Next`](https://github.com/TidyFactor/Next) | `tidyfactor-next` | [`@alwkala/tidyfactor-next`](https://www.npmjs.com/package/@alwkala/tidyfactor-next) |
 | **HTML** | Development | [`TidyFactor/HTML`](https://github.com/TidyFactor/HTML) | `tidyfactor-html` | [`@alwkala/tidyfactor-html`](https://www.npmjs.com/package/@alwkala/tidyfactor-html) |
 | **HTMX** | Development | [`TidyFactor/HTMX`](https://github.com/TidyFactor/HTMX) | `tidyfactor-htmx` | [`@alwkala/tidyfactor-htmx`](https://www.npmjs.com/package/@alwkala/tidyfactor-htmx) |
 | **JS** | Development | [`TidyFactor/JS`](https://github.com/TidyFactor/JS) | `tidyfactor-js` | [`@alwkala/tidyfactor-js`](https://www.npmjs.com/package/@alwkala/tidyfactor-js) |
@@ -313,16 +327,36 @@ TidyFactor Organization (github.com/TidyFactor)
 
 ---
 
-## 👨‍💻 Organization & Support
+## 🏛️ TidyFactor Skill Methodology & Governance
 
-- 🌐 **Official Website:** [https://tidyfactor.com/](https://tidyfactor.com/)
-- 📚 **Official Documentation:** [https://tidyfactor.com/documentation](https://tidyfactor.com/documentation)
-- 🤝 **Official Partner Website:** [Alwkala Digital Agency](https://alwkala.com/)
+`tidyfactor-next` passes all **8 Architectural Governance Rules** under [`tidyfactor-skill-architect`](https://github.com/TidyFactor/Skill-Architect):
+
+1. ✅ **Dispatcher Discipline**: `SKILL.md` routes commands without executing tasks (~350 tokens).
+2. ✅ **One Workflow = One Outcome**: Every workflow has a single deliverable with an explicit validation checklist.
+3. ✅ **Operational Memory**: Pure SQL templates, schemas, and architecture rules—zero narrative prose.
+4. ✅ **No Empty Structures**: Clean, flattened architecture without single-file folders.
+5. ✅ **Philosophy Isolation**: Technical execution separated from marketing commentary.
+6. ✅ **Trigger-Justified Growth**: Commands added per verifiable SaaS lifecycle stages.
+7. ✅ **Security & Quality Bar**: Automated RLS coverage queries (`pg_tables`, `pg_policies`) and leak diagnosis.
+8. ✅ **Cross-Platform Parity**: 100% identical behavior across Antigravity, Claude Code, Cursor, and Codex.
+
+---
+
+## 🤝 Contributing
+
+We welcome community contributions, custom query layer adapters, and workflow refinements!
+
+Please read our [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before opening a Pull Request. All proposed workflows and memory extensions must satisfy the `tidyfactor-skill-architect` governance rules.
+
+---
+
+## 👨‍💻 Support
+
+- 🌐 **Website:** [tidyfactor.com](https://tidyfactor.com/)
+- 📚 **Documentation:** [tidyfactor.com/documentation](https://tidyfactor.com/documentation)
+- 🤝 **Commercial Partner:** [Alwkala Digital Agency](https://alwkala.com/)
 - 🐙 **GitHub Organization:** [github.com/TidyFactor](https://github.com/TidyFactor)
-- 📧 **Business Inquiries:** [hello@tidyfactor.com](mailto:hello@tidyfactor.com)
-- 📱 **WhatsApp:** [+20 101 665 6899](https://wa.me/201016656899)
-- 📞 **Phone:** +20 101 665 6899
-- 📍 **Location:** Cairo, Egypt
+- 📧 **Inquiries:** [hello@tidyfactor.com](mailto:hello@tidyfactor.com)
 
 ---
 

@@ -1,26 +1,85 @@
 <div align="center" dir="rtl">
 
 # ⚡ مهارة تايتفكتور لمعمارية ستارت أب `TidyFactor Next.js v1.3.0`
-### محرك المعمارية السحابية متعددة المستأجرين (Multi-Tenant SaaS) وتأمين البيانات وتحسين أداء التطوير
+### مهارة المعمارية السحابية متعددة المستأجرين (Multi-Tenant SaaS) وتأمين البيانات ومحرك الأداء لوكلاء الذكاء الاصطناعي
 
-**المسار المعماري المعتمد لبناء تطبيقات الساس متعددة المستأجرين وتحسين موارد بيئة التطوير على Next.js 16 و React 19 و TypeScript Strict و Supabase ضمن منظومة TidyFactor.**
+امنح وكلاء البرمجة الذكية (**Google Antigravity و Claude Code و Cursor و OpenAI Codex و Windsurf**) معمارية أمنية محكمة لا تقبل التهاون على **Next.js 16 + React 19 + Supabase** — ليتوقف وكيلك عن ارتجال عزل المستأجرين ويبدأ في فرضه حتمياً.
 
 [![npm version](https://img.shields.io/npm/v/@alwkala/tidyfactor-next.svg?style=for-the-badge&color=000000)](https://www.npmjs.com/package/@alwkala/tidyfactor-next)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=for-the-badge)](LICENSE)
 [![Tenant Isolation](https://img.shields.io/badge/Tenant%20Isolation-Postgres%20RLS-3ECF8E.svg?style=for-the-badge)](#-نموذج-عزل-المستأجرين-الصارم-locked-tenant-isolation)
-[![Next.js 16 Ready](https://img.shields.io/badge/Next.js-16%20App%20Router-black.svg?style=for-the-badge)](#-معمارية-المنظومة-والمكدس-التقني)
-[![Architect Score](https://img.shields.io/badge/Architect%20Score-8%2F8%20Pass%20(100%25)-green.svg?style=for-the-badge)](#-منهجية-tidyfactor-وحوكمة-الامتثال-88-pass)
+[![Next.js 16 Ready](https://img.shields.io/badge/Next.js-16%20App%20Router-black.svg?style=for-the-badge)](#-لماذا-tidyfactornext)
+[![Architect Score](https://img.shields.io/badge/Architect%20Score-8%2F8%20Pass%20(100%25)-green.svg?style=for-the-badge)](#-منهجية-tidyfactor-وحوكمة-الامتثال)
 
-[✨ موقع الوكالة](https://alwkala.com) • [🔒 عزل المستأجرين](#-نموذج-عزل-المستأجرين-الصارم-locked-tenant-isolation) • [⚡ دورة حياة الأوامر الـ 15](#-دورة-حياة-أوامر-الساس-الـ-15-saas-command-lifecycle) • [🚀 محرك أداء التطوير](#-محرك-أداء-بيئة-التطوير-وتشخيص-عنق-الزجاجة-dev-perf-engine) • [🛡️ سياسات RLS والـ Auth](#%EF%B8%8F-مصفوفة-سياسات-rls-وخطافات-المصادقة) • [📖 English Version](README.md)
+[🚀 البدء السريع](#-البدء-السريع) • [🎯 لماذا TidyFactor/Next](#-لماذا-tidyfactornext) • [🔒 عزل المستأجرين](#-نموذج-عزل-المستأجرين-الصارم-locked-tenant-isolation) • [⚡ دورة حياة الأوامر الـ 15](#-دورة-حياة-أوامر-الساس-الـ-15-saas-command-lifecycle) • [🚀 محرك الأداء](#-محرك-الأداء-وتشخيص-الموارد) • [❓ الأسئلة الشائعة](#-الأسئلة-الشائعة-faq) • [📖 English Version](README.md)
 
 </div>
 
 ---
 
-> [!IMPORTANT]
-> **TidyFactor Next.js** هي مهارة ذكاء اصطناعي (AI Agent Skill) ومعمارية برمجية صارمة للوكلاء الأذكياء (*Google Antigravity, Claude Code, Cursor, Codex, Windsurf*) وكبار مهندسي الفول ستاك. تفرض المهارة **عزلاً غير قابل للاختراق لبيانات المستأجرين** باستخدام سياسات أمان مستوى الصف في بوستجريس (PostgreSQL RLS) كحاجز أمان صلب في قاعدة البيانات—مما يمنع تسريب البيانات وتلوث الحسابات متعددة المستأجرين تماماً من اليوم الأول.
->
-> بالإضافة إلى ذلك، تدمج المهارة **محرك أداء بيئة التطوير القائم على الأدلة (Development Performance Engine)** لتشخيص اختناقات وموارد بيئة التطوير (ضغط الذاكرة RAM، ضغط القرص Disk I/O، شجرة الاعتماديات، نطاق TypeScript، ومراقبة الملفات) وتطبيق التحسينات الآمنة مع قياس الفروقات (DELTA Benchmarking).
+## 📚 جدول المحتويات
+
+- [🎯 لماذا TidyFactor/Next](#-لماذا-tidyfactornext)
+- [🚀 البدء السريع](#-البدء-السريع)
+- [🌟 القيمة المعمارية المضافة](#-القيمة-المعمارية-المضافة)
+- [🔒 نموذج عزل المستأجرين الصارم (Locked Tenant Isolation)](#-نموذج-عزل-المستأجرين-الصارم-locked-tenant-isolation)
+- [⚡ دورة حياة أوامر الساس الـ 15 (SaaS Command Lifecycle)](#-دورة-حياة-أوامر-الساس-الـ-15-saas-command-lifecycle)
+- [🚀 محرك الأداء وتشخيص الموارد (Performance Engine)](#-محرك-الأداء-وتشخيص-الموارد)
+  - [1. مصفوفة قواعد أداء التشغيل من هندسة فرسل (8 طبقات ذات أولوية)](#1-مصفوفة-قواعد-أداء-التشغيل-من-هندسة-فرسل-8-طبقات-ذات-أولوية)
+  - [2. نماذج تشخيص اختناقات بيئة التطوير الستة](#2-نماذج-تشخيص-اختناقات-بيئة-التطوير-الستة)
+  - [3. مستويات أمان التحسين (الأخضر / الأصفر / الأحمر)](#3-مستويات-أمان-التحسين-الأخضر--الأصفر--الأحمر)
+- [🛡️ مصفوفة سياسات RLS وخطافات JWT](#%EF%B8%8F-مصفوفة-سياسات-rls-وخطافات-jwt)
+- [📋 ذاكرة المشروع التشغيلية وملف `ARCHITECTURE.md`](#-ذاكرة-المشروع-التشغيلية-وملف-architecturemd)
+- [❓ الأسئلة الشائعة (FAQ)](#-الأسئلة-الشائعة-faq)
+- [🏛️ منظومة تايدي فاكتور الشاملة (TidyFactor Ecosystem)](#%EF%B8%8F-منظومة-تايدي-فاكتور-الشاملة-tidyfactor-ecosystem)
+- [🏛️ منهجية TidyFactor وحوكمة الامتثال](#%EF%B8%8F-منهجية-tidyfactor-وحوكمة-الامتثال)
+- [🤝 المساهمة والتطوير المجتمعي](#-المساهمة-والتطوير-المجتمعي)
+- [👨‍💻 قنوات الدعم والتواصل](#-قنوات-الدعم-والتواصل)
+- [📜 الترخيص](#-الترخيص)
+
+---
+
+## 🎯 لماذا TidyFactor/Next
+
+معظم مهارات Next.js لوكلاء الذكاء الاصطناعي تركز على كتابة كود قياسي — كاصطلاحات App Router وإدارة الكاش وتحسين حجم الحزم. هذا ضروري، لكنه **لا يمنع** الوكيل الذكي من كتابة استعلام يسرب بيانات الشركة (أ) إلى لوحة تحكم الشركة (ب).
+
+**تعمل TidyFactor/Next على مستوى أعمق: إنها عقد معماري وأمني صارم وليست مجرد دليل لتنسيق الكود.**
+
+| البُعد | مهارات Next.js العامة | `tidyfactor-next` |
+|---|---|---|
+| **ما تعلمه للوكيل** | اصطلاحات App Router، حدود RSC، إدارة الكاش | معمارية الساس متعدد المستأجرين + حاجز أمان Postgres RLS الصلب |
+| **النطاق** | **أفقي واسع**: مقتطفات برمجية صغيرة عامة | **عمودي متخصص**: تخصص كامل في تطبيقات الـ SaaS من البداية للنهاية |
+| **أخطاء تمنعها حتمياً** | بطء المكونات، أحجام حزم غير محسنة | تسريب بيانات المستأجرين ونسيان شروط `WHERE tenant_id = ...` |
+| **نطاق الأداء** | نصائح أداء عامة لبيئة الإنتاج | **محرك مزدوج**: 8 طبقات أداء تشغيلي + 6 نماذج لتشخيص موارد بيئة التطوير |
+| **درجة الامتثال المعماري** | غير محددة | **100% Architect Score** (تطابق كامل لقواعد حوكمة تايدي فاكتور) |
+| **هل يمكن دمجهما معاً؟** | ✅ | ✅ — ثبّتهما معاً؛ فهما يكملان بعضهما بدقة |
+
+> [!TIP]
+> إذا كنت تبني تطبيق ساس (SaaS) حيث يعني تسريب البيانات بين المستأجرين مساءلة قانونية، فإن **`tidyfactor-next` هي طبقة الحماية الأساسية التي يحتاجها وكيلك الذكي** إلى جانب أفضل ممارسات رياكت العامة.
+
+---
+
+## 🚀 البدء السريع
+
+### 1. المعالج التفاعلي والحقن المباشر
+
+```bash
+# المعالج التفاعلي لإنشاء منصة ساس جديدة معزولة
+npx @alwkala/tidyfactor-next
+
+# أو حقن المهارة مباشرة داخل مشروع Next.js قائم
+npx @alwkala/tidyfactor-next add-skill
+```
+
+### 2. مسارات التثبيت اليدوي حسب بيئة الوكيل الذكي
+
+| وكيل الذكاء الاصطناعي | مسار التثبيت في مساحة العمل |
+|---|---|
+| **Google Antigravity** | `.agents/skills/tidyfactor-next/` أو الإعدادات العامة `~/.gemini/config/skills/` |
+| **Claude Code** | `.claude-skill/skills/tidyfactor-next/` |
+| **Cursor / Codex / Windsurf** | `.agents/skills/tidyfactor-next/` |
+
+بمجرد التثبيت، اكتب `/init` أو `/brief` داخل نافذة المحادثة مع الوكيل لاكتشاف اختيارات المشروع وتوليد ملف المعمارية الموحد `ARCHITECTURE.md`!
 
 ---
 
@@ -28,30 +87,30 @@
 
 ```mermaid
 graph TD
-    UserReq["🌐 الطلب الوارد"] --> Edge["🛡️ برمجية Edge الوسيطة<br/>(حل هوية المستأجر والإغلاق عند الفشل)"]
-    Edge --> Context["📦 سياق المستأجر<br/>(tenant_id + مطالبات JWT الموثوقة)"]
-    Context --> App["⚡ تطبيق Next.js 16 App Router<br/>(مكونات السيرفر والإجراءات)"]
-    App --> Query["🔌 طبقة الاستعلام القابلة للتغيير<br/>(Supabase JS / Drizzle / Prisma)"]
-    Query --> Postgres["🐘 قاعدة بيانات PostgreSQL"]
-    Postgres --> RLS["🔒 سياسات أمان مستوى الصف (RLS)<br/>USING (tenant_id = auth.jwt() ->> 'tenant_id')"]
-    RLS --> Data["✅ بيانات المستأجر المعزولة بأمان"]
+    UserReq["🌐 Incoming Request"] --> Edge["🛡️ Edge Middleware<br/>(Fail-Closed Tenant Resolution)"]
+    Edge --> Context["📦 Tenant Context<br/>(tenant_id + JWT Claims)"]
+    Context --> App["⚡ Next.js 16 App Router<br/>(Server Components & Actions)"]
+    App --> Query["🔌 Pluggable Query Layer<br/>(Supabase JS / Drizzle / Prisma)"]
+    Query --> Postgres["🐘 PostgreSQL Database"]
+    Postgres --> RLS["🔒 Row Level Security (RLS)<br/>USING (tenant_id = auth.jwt() ->> 'tenant_id')"]
+    RLS --> Data["✅ Isolated Tenant Data"]
 ```
 
-| لمهندسي البرمجيات والفول ستاك | لمؤسسي منصات الـ SaaS والـ CTOs | لوكلاء الذكاء الاصطناعي (AI Agents) |
+| لمهندسي الفول ستاك | لمؤسسي الشركات والمدراء التقنيين | لوكلاء البرمجة الذكية (AI Agents) |
 |---|---|---|
-| **عزل مستأجرين صارم ومغلق**: مخطط بيانات مشترك (Shared Schema) مع `tenant_id` + سياسات Postgres RLS؛ وداعاً لتعقيدات المخطط لكل عميل وتجميع الاتصالات. | **ضمان عدم تسريب البيانات**: حاجز الأمان صلب على مستوى قاعدة البيانات، وأي خطأ برمجي في التطبيق لا يمكنه كشف بيانات عميل لآخر. | **توجيه موفر لسياق الذاكرة**: ملف `SKILL.md` خفيف جداً (~350 Tokens) يمنع حشو الذاكرة ويستدعي الملفات المحددة فقط عند الطلب. |
-| **طبقة استعلام قابلة للتبديل**: اختيار Supabase JS client أو Drizzle ORM أو Prisma لمرة واحدة في `init`، والتزام كافة الأوامر باختيارك. | **خطاف مصادقة مخصص (Custom JWT Hook)**: حقن `tenant_id` و `role` من السيرفر مباشرة عند توليد التوكن دون الوثوق بمدخلات العميل. | **مسارات عمل محددة وقابلة للتحقق**: كل أمر ينتهي بقائمة فحص تحقق صارمة للتأكد من السلامة قبل التصدير. |
-| **حل هوية آمن ومغلق (Fail-Closed)**: Middleware على الـ Edge يحل النطاق الفرعي أو المخصص مع الإغلاق المباشر (404/403) عند أي خطأ. | **معمارية خالية من القيود الاحتكارية**: مبنية على معايير Next.js App Router و PostgreSQL الرسمية بنسبة 100%. | **امتثال كامل بنسبة 100%**: مطابقة تامة مع معايير حوكمة مهارات الذكاء الاصطناعي في TidyFactor. |
-| **محرك تحسين أداء التطوير**: تشخيص اختناقات الرام والمعالج والقرص قبل لمس الكود، مع توثيق قياسات قبل وبعد التحسين. | **تكلفة استضافة وبنية متوقعة**: اكتشاف تسريب حزم السيرفر لكود المتصفح والحد من تضخم حزم العميل (Client Bundles). | **حاجز أمان الساس الصارم**: منع أي تعديل أداء قد يُضعف سياسات RLS أو يمس عزل المستأجرين تلقائياً. |
+| **عزل مستأجرين محكم**: مخطط قاعدة بيانات مشترك مع `tenant_id` وسياسات RLS، دون تعقيدات تعدد قواعد البيانات وهجرة المخططات المنفصلة. | **ضمان عدم تسريب البيانات**: حاجز أمان صلب على مستوى قاعدة البيانات؛ أخطاء الكود البرمجي لا يمكنها كشف بيانات حساب لآخر. | **موجه أوامر فائق الخفة**: يستهلك موجه `SKILL.md` حوالي 350 توكن فقط عند البداية، ويستدعي الذاكرة التشغيلية عند الطلب فقط. |
+| **طبقة استعلام مرنة**: اختر Supabase JS أو Drizzle ORM أو Prisma لمرة واحدة عند التهيئة، ويلتزم بها الكود المولد بالكامل. | **خطاف JWT مخصص على السيرفر**: حقن `tenant_id` وصلاحيات الدور داخل التوكن على السيرفر، وعدم الوثوق أبداً بمدخلات العميل. | **سير عمل حتمي**: ينفذ كل أمر قائمة تحقق صارمة (Validation Checklist) لضمان جودة المخرجات. |
+| **حل الهوية الصارم (Fail-Closed)**: برمجيات الـ Edge الوسيطة تحل هوية المستأجر عبر النطاق الفرعي أو النطاق المخصص أو الجلسة، وتغلق الاتصال فوراً عند الخطأ (404/403). | **معمارية حرة دون قيود**: معايير قياسية على Next.js App Router و PostgreSQL دون الاعتماد على أدوات مغلقة المصدر. | **توافق كامل بنسبة 100%**: متوافقة مع القواعد الهيكلية لمنظومة TidyFactor Skill Architect. |
+| **محرك أداء قائم على الأدلة**: تشخيص اختناقات الرام والمعالج والقرص قبل تعديل الكود، مع قياس الفروقات الحسابية (DELTA). | **تكاليف استضافة قابلة للتوقع**: كشف الحزم المتضخمة وتسريبات مفاتيح السيرفر قبل النشر. | **حدود أمان الساس الصارمة**: حظر تلقائي للتحسينات التي قد تضعف سياسات RLS أو عزل البيانات. |
 
 ---
 
 ## 🔒 نموذج عزل المستأجرين الصارم (Locked Tenant Isolation)
 
-تفرض المهارة قواعد أمان صارمة وغير قابلة للتفاوض عبر دورة حياة التطبيق:
+تفرض `tidyfactor-next` سياسات عزل صارمة غير قابلة للتهاون طوال دورة حياة المشروع:
 
 ```sql
--- سياسة العزل القياسية للمستأجرين (النمط 1)
+-- سياسة عزل المستأجر القياسية (النمط 1)
 ALTER TABLE public.organizations ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "organizations_tenant_isolation_select" ON public.organizations
@@ -68,17 +127,17 @@ CREATE POLICY "organizations_tenant_isolation_delete" ON public.organizations
   FOR DELETE USING (tenant_id = (auth.jwt() ->> 'tenant_id')::uuid);
 ```
 
-### 🚨 القواعد الأمنية الحاكمة:
-1. **سياسات RLS هي حاجز الأمان الحقيقي**: شرط `WHERE tenant_id = ...` في التطبيق هو مجرد تحسين لخطة الاستعلام، وغياب سياسة RLS يعتبر عيباً برمجياً خطيراً يمنع نشر الكود.
-2. **عزل مفتاح `service_role`**: منع وصول مفتاح الصلاحيات المطلقة إلى كود العميل أو الـ APIs العامة نهائياً، واستخدامه حصراً في السيرفر مع إعادة التحقق من المستأجر.
-3. **حل هوية المستأجر عند الـ Edge**: حل المستأجر مرة واحدة وتمرير السياق صراحة، ومنع إعادة اشتقاق الهوية عشوائياً داخل طبقات المكونات.
-4. **تدقيق العمليات العابرة للمستأجرين**: عمليات الدخول الإداري بالنيابة (Impersonation) والتقارير العامة يجب عزلها واعتبارها نقاط تدقيق أمني حساسة.
+### 🚨 توجيهات الأمان غير القابلة للجدل:
+1. **سياسات RLS هي حاجز الأمان الحقيقي**: وضع شرط `WHERE tenant_id = ...` في الكود هو مجرد تلميح لمحسن الاستعلامات. إذا تم تعطيل RLS، يعتبر النظام معيباً برمجياً.
+2. **عزل مفتاح `service_role`**: ممنوع نهائياً من الوصول لمتصفح العميل أو الواجهات العامة. يستخدم فقط في خلفية السيرفر مع إعادة التحقق من سياق المستأجر.
+3. **تمرير السياق من الـ Edge**: يتم حل هوية المستأجر مرة واحدة عند نقطة الدخول وتمريرها للأسفل، وتجنب إعادة استنتاجها عشوائياً في المكونات الداخلية.
+4. **مراجعة العمليات العابرة للمستأجرين**: عمليات الدخول الإداري بالنيابة والتقارير العامة يتم عزلها واعتبارها نقاط تدقيق أمني حساسة.
 
 ---
 
 ## ⚡ دورة حياة أوامر الساس الـ 15 (SaaS Command Lifecycle)
 
-تغطي المهارة كافة مراحل بناء منصات الساس عبر 15 أمراً تخصصياً مكتملاً بنسبة 100%:
+تغطي المهارة كافة مراحل بناء منصات الساس عبر 15 أمراً تخصصياً مكتملاً بنسبة **100%**:
 
 | المرحلة | الأمر | نية واستخدام الأمر | ما يتم تحميله في الذاكرة | الحالة |
 |---|---|---|---|:---:|
@@ -100,70 +159,48 @@ CREATE POLICY "organizations_tenant_isolation_delete" ON public.organizations
 
 ---
 
-## 🚀 محرك أداء بيئة التطوير وتشخيص عنق الزجاجة (Dev-Perf Engine)
+## 🚀 محرك الأداء وتشخيص الموارد
 
-على عكس نصائح الأداء التقليدية التي تركز فقط على أوقات تحميل المتصفح (Web Vitals)، يركز مسار `perf` على **تكلفة بيئة التطوير نفسها**: بطء إقلاع السيرفر، بطء التحديث اللحظي (HMR)، استهلاك الرام المفرط، واختناقات قراءة وكتابة القرص الصلب.
+### 1. مصفوفة قواعد أداء التشغيل من هندسة فرسل (8 طبقات ذات أولوية)
 
-```
-                 بيئة التطوير (Development Environment)
-                                │
-        ┌───────────────────────┼───────────────────────┐
-        ↓                       ↓                       ↓
-  الذاكرة (RAM)          المعالج (CPU)           القرص (Storage I/O)
-        │                       │                       │
-        └───────────────────────┼───────────────────────┘
-                                ↓
-                 أدوات التطوير (Toolchain)
-                                │
-        ┌───────────────────────┼───────────────────────┐
-        ↓                       ↓                       ↓
-   الاعتماديات             TypeScript                  المُحزّم
-        ↓                       ↓                       ↓
-  الاستيرادات                 ESLint               الكاش والتخزين
-        └───────────────────────┼───────────────────────┘
-                                ↓
-                  تجربة المطور (Developer Experience)
-```
+تتضمن المهارة أكثر من 40 قاعدة أداء تشغيلي مقسمة لـ 8 مستويات أولوية حاسمة (`references/memory/react-perf-rules.md`):
 
-### 1. الكشف عن النوايا والتوجيه (Phase 0)
-لا يلمس المحرك أي ملف قبل التأكد من النية البرمجية:
-- `AUDIT` → فحص شامل عبر 13 مرحلة وإصدار تقرير بـ 120 نقطة.
-- `DIAGNOSE` → عزل عنق الزجاجة الأساسي عبر 6 نماذج سببية.
-- `OPTIMIZE` → تطبيق التحسينات الآمنة (فئة 🟢 Green) فقط وتوثيق DELTA.
-- `BENCHMARK` → القياس البارد والدافئ وحساب الوسيط الإحصائي.
-- `REPORT` → عرض حالة التقرير والتحقق من صلاحيته وتغيرات الـ Git.
+1. **الطبقة 1: القضاء على الشلالات الشبكية (`async-*`) [حرجة للغاية]**: تقييم الشروط المتزامنة قبل `await`، تأجيل `await` للفروع المستهلكة فقط، موازاة الاستعلامات المستقلة عبر `Promise.all()`، والتدفق التدريجي عبر `<Suspense>`.
+2. **الطبقة 2: تحسين حجم الحزم البرمجية (`bundle-*`) [حرجة للغاية]**: منع ملفات التجميع (Barrel files)، تهيئة `optimizePackageImports`، والاستيراد الديناميكي للمكونات الثقيلة عبر `next/dynamic({ ssr: false })`.
+3. **الطبقة 3: أداء جانب السيرفر (`server-*`) [عالية الأهمية]**: منع تكرار الطلبات عبر `React.cache()`، ترحيل المهام غير الحاجبة (كالتقارير والتنبيهات) إلى `after()`، وتمرير كائنات DTO مصغرة فقط عبر حدود RSC.
+4. **الطبقة 4: جلب البيانات من جانب العميل (`client-*`) [متوسطة - عالية]**: منع تكرار الطلبات عبر SWR أو TanStack Query، واستخدام مستمعات التمرير السلبية (`passive listeners`).
+5. **الطبقة 5: تحسين إعادة الرسم (`rerender-*`) [متوسطة]**: حساب الحالة المشتقة أثناء الرسم (Render) دون مزامنتها في `useEffect`، تجنب `useMemo` على القيم البسيطة، واستخدام `startTransition` و `useDeferredValue`.
+6. **الطبقة 6: أداء الرسم والتصيير (`rendering-*`) [متوسطة]**: تطبيق `content-visibility: auto` على القوائم الطويلة، ورفع عناصر JSX الثابتة خارج دوال المكونات.
+7. **الطبقة 7: أداء الجافاسكربت (`js-*`) [منخفضة - متوسطة]**: منع اضطراب تخطيط المتصفح (Layout Thrashing) بدمج عمليات القراءة والكتابة، واستخدام `Set` و `Map` للبحث السريع $O(1)$.
+8. **الطبقة 8: الأنماط المتقدمة (`advanced-*`) [منخفضة]**: عزل المنطق غير التفاعلي عبر `useEffectEvent`، وتهيئة التطبيق العامة لمرة واحدة.
 
-### 2. النماذج السببية الستة لتشخيص عنق الزجاجة (Causality Models)
-- **النموذج A (ضغط الرام ← اختناق القرص)**: امتلاء الرام يجبر نظام التشغيل على استخدام ملف الترحيل (Pagefile/Swap)، مما يشل سرعة HMR والـ IDE.
-- **النموذج B (شجرة الاعتماديات الضخمة ← ضغط المعالج والرام)**: حجم `node_modules` الكبير يعيق إقلاع السيرفر الأولي وفحص TypeScript.
-- **النموذج C (بطء التخزين ← اختناق الكاش)**: عمليات القراءة والكتابة المكثفة لمجلد `.next/cache` على أقراص HDD/SATA البطيئة.
-- **النموذج D (اتساع نطاق TypeScript)**: إدراج مجلدات المخرجات أو الملفات المولدة في `tsconfig.json` يثقل كاهل الـ Language Server.
-- **النموذج E (تكلفة ESLint والأدوات)**: تشغيل قواعد `typeChecked` الثقيلة دون تفعيل الـ Cache.
-- **النموذج F (تجاوز حدود مراقبة الملفات Watch Boundaries)**: وجود آلاف الملفات المرفوعة أو الفيديوهات داخل شجرة كود المشروع.
+### 2. نماذج تشخيص اختناقات بيئة التطوير الستة
 
-### 3. تصنيف درجات خطورة التحسينات
+يعالج مسار الأداء بطء إقلاع السيرفر وبطء الـ HMR واستهلاك الرام والقرص عبر **6 نماذج سببية**:
+- **النموذج A (ضغط الرام ← ضغط القرص)**: امتلاء الذاكرة وانتقال النظام للـ Swap/Pagefile.
+- **النموذج B (تضخم شجرة الاعتماديات ← المعالج والرام)**: حجم `node_modules` الكبير وبطء التحليل الأولي.
+- **النموذج C (بطء وسائط التخزين ← عنق زجاجة الكاش)**: بطء قراءة وكتابة مجلد `.next/cache`.
+- **النموذج D (اتساع نطاق TypeScript)**: تحليل ملفات ومجلدات غير برمجية داخل `tsconfig.json`.
+- **النموذج E (تكلفة أدوات الفحص ESLint)**: تشغيل قواعد `typeChecked` دون تفعيل الكاش.
+- **النموذج F (تجاوز نطاق مراقبة الملفات)**: مراقبة آلاف الوسائط والملفات الثابتة غير المصدرية داخل المشروع.
+
+### 3. مستويات أمان التحسين (الأخضر / الأصفر / الأحمر)
 
 ```mermaid
 graph TD
-    Finding["🔍 نتيجة الفحص"] --> Tier{"تصنيف الأمان"}
-    Tier -->|🟢 Green| GreenAction["✅ تطبيق تلقائي مباشر<br/>(حذف الحزم غير المستخدمة، ضبط tsconfig، استبعاد المجلدات)"]
-    Tier -->|🟡 Yellow| YellowPipeline["📋 خط أنابيب الأدلة الـ 8 خطوات<br/>(optimizePackageImports، تفكيك Barrel Imports)"]
-    Tier -->|🔴 Red| RedForbidden["🚫 محظور من التطبيق التلقائي<br/>(تعديل المخطط، RLS، Auth، عزل المستأجرين)"]
+    Finding["🔍 Optimization Finding"] --> Tier{"Safety Classification"}
+    Tier -->|🟢 Green| GreenAction["✅ Apply Automatically<br/>(Unused deps, tsconfig scope, watchIgnore)"]
+    Tier -->|🟡 Yellow| YellowPipeline["📋 8-Step Evidence Pipeline<br/>(optimizePackageImports, barrel restructure)"]
+    Tier -->|🔴 Red| RedForbidden["🚫 Permanently Forbidden<br/>(DB schema, RLS, Auth, Tenant Isolation)"]
 ```
 
-- **🟢 فئة خضراء (Green - آمنة)**: حذف الحزم المؤكد عدم استخدامها، تصحيح تصنيف `dependencies` و `devDependencies`، حصر نطاق `tsconfig.json`، وضبط استثناءات `watchIgnore`.
-- **🟡 فئة صفراء (Yellow - تتطلب موافقة ودليل)**: تفعيل `optimizePackageImports` (مشروط بوجود أدلة واضحة)، إعادة هيكلة استيرادات الـ Barrel، وتحويل المكونات.
-- **🔴 فئة حمراء (Red - محظورة نهائياً)**: تعديل مخطط قاعدة البيانات، تغيير سياسات RLS، المساس بالمصادقة وعزل المستأجرين، أو إيقاف الكاش كلياً.
-
-### 4. بروتوكول التحكم في ضوضاء القياس (Noise Control)
-القياس لمرة واحدة غير دقيق بسبب كاش النظام والعمليات الخلفية:
-- **الفصل بين القياس البارد والدافئ (Cold vs Warm)**: التمييز بين أسوأ سيناريو (Cold Start) وتجربة المطور اليومية (Warm Restart).
-- **حساب الوسيط الإحصائي (Median of 3 Runs)**: تكرار كل اختبار 3 مرات واعتماد الوسيط الحسابي.
-- **قاعدة عتبة الضوضاء (Noise Threshold)**: إذا تجاوز الفرق بين أعلى وأقل قياس 20%، يعتبر القياس غير صالح ويُعاد اختباره.
+- **🟢 الأخضر (آمن، يطبق تلقائياً)**: حذف الحزم غير المستخدمة، ضبط تصنيف الحزم، تضييق نطاق `tsconfig.json`، واستبعاد مجلدات الوسائط عبر `watchIgnore`.
+- **🟡 الأصفر (يتطلب موافقة المطور بأدلة)**: تفعيل `optimizePackageImports` بناءً على فحص فعلي، إعادة هيكلة الاستيرادات المجمعة، وتحويل مكونات العميل لسيرفر.
+- **🔴 الأحمر (محظور تماماً)**: تعديل مخطط قاعدة البيانات، سياسات RLS، تدفقات المصادقة، عزل المستأجرين، أو تعطيل كاش Next.js عالمياً.
 
 ---
 
-## 🛡️ مصفوفة سياسات RLS وخطافات المصادقة
+## 🛡️ مصفوفة سياسات RLS وخطافات JWT
 
 ### 1. جدول عضويات المستأجرين (`tenant_memberships`)
 ```sql
@@ -181,7 +218,7 @@ CREATE POLICY "memberships_self_select" ON public.tenant_memberships
   FOR SELECT USING (user_id = auth.uid());
 ```
 
-### 2. خطاف مخصص لحقن مطالبات التوكن في Supabase (Custom Token Hook)
+### 2. خطاف JWT المخصص في Supabase
 ```sql
 CREATE OR REPLACE FUNCTION public.custom_access_token_hook(event jsonb)
 RETURNS jsonb LANGUAGE plpgsql STABLE AS $$
@@ -206,139 +243,123 @@ $$;
 
 ---
 
-## 📋 ذاكرة المشروع وسجل القرارات المعمارية (`ARCHITECTURE.md`)
+## 📋 ذاكرة المشروع التشغيلية وملف `ARCHITECTURE.md`
 
-تقوم المهارة أثناء أمر `init` بتوليد ملف `ARCHITECTURE.md` في جذر المشروع، ليعمل كـ **مصدر حقيقة موحد (Single Source of Truth)** يمنع انحراف القرارات عبر الجلسات:
-- **المعمارية الأساسية الثابتة**: App Router و React 19 و TypeScript strict و Postgres RLS.
-- **القرارات المختارة لمرة واحدة**: طبقة الاستعلام (Supabase JS, Drizzle, Prisma)، استراتيجية حل المستأجر، مزود المصادقة، ونموذج الصلاحيات.
-- **سياق الأداء (Performance Context)**: الاختناقات المعروفة، استراتيجية التخزين، نقطة القياس النشطة، وتاريخ آخر تدقيق أداء.
-- **سجل القرارات المعمارية (ADR Log)**: سجل غير قابل للحذف يوثق كل قرار معماري هام مع أسبابه وبدائله.
-- **سجل المخاطر والديون التقنية (Open Risks)**: سجل مرتب حسب الأولوية (P0 إلى P3) يتم تغذيته تلقائياً من أوامر `perf` و `rls` و `audit`.
+عند تشغيل أمر `/init`، تولد المهارة ملف `ARCHITECTURE.md` في جذر المشروع ليكون **المصدر المرجعي الموحد** عبر جلسات الوكلاء:
+- **الخيارات المحسومة للمنظومة**: App Router و React 19 و TypeScript الصارم وسياسات RLS.
+- **القرارات المتخذة لمرة واحدة**: طبقة الاستعلام (Supabase JS, Drizzle, Prisma)، استراتيجية حل هوية المستأجر، ومزود المصادقة.
+- **سياق الأداء**: الاختناقات المعروفة، استراتيجية التخزين، آخر نقطة قياس وتاريخ آخر فحص مع كود الـ Commit.
+- **سجل القرارات المعمارية (ADR Log)**: سجل تراكمي لتوثيق التحولات والقرارات الهامة.
+- **سجل المخاطر المفتوحة والديون التقنية**: مصفوفة مرتبة حسب الأولوية (P0–P3).
 
 ---
 
-## 🚀 التثبيت والاستخدام
+## ❓ الأسئلة الشائعة (FAQ)
 
-### 1. معالج التثبيت التفاعلي:
+<details>
+<summary><b>هل تغني هذه المهارة عن مهارات Next.js العامة مثل <code>react-best-practices</code>؟</b></summary>
+<br/>
+<b>كلا — استخدمهما معاً.</b> تحكم <code>tidyfactor-next</code> المعمارية متعددة المستأجرين وعزل البيانات وحدود RLS الصارمة. بينما تركز مهارات الممارسات العامة على تنسيق كود رياكت وتنسيقات التصميم. لا يوجد تعارض بينهما، وتدمج <code>tidyfactor-next</code> قواعد أداء التشغيل لفرسل مباشرة.
+</details>
 
-```bash
-# تشغيل معالج التثبيت التفاعلي المباشر
-npx @alwkala/tidyfactor-next
+<details>
+<summary><b>ما هي بيئات وكلاء الذكاء الاصطناعي المدعومة؟</b></summary>
+<br/>
+<b>Google Antigravity و Claude Code و Cursor و OpenAI Codex و Windsurf</b>، وتعمل المهارة بنفس السلوك الحتمي عبر جميع هذه البيئات.
+</details>
+
+<details>
+<summary><b>هل يمكنني استخدام Drizzle ORM أو Prisma بدلاً من عميل Supabase JS؟</b></summary>
+<br/>
+<b>نعم بالتأكيد.</b> طبقة الاستعلام هي قرار يتخذ لمرة واحدة عند التهيئة عبر <code>init</code> أو <code>brief</code>، ويلتزم الكود المولد بهذا الاختيار بدقة.
+</details>
+
+<details>
+<summary><b>ماذا يحدث لو تم تعطيل RLS بالخطأ على أحد الجداول؟</b></summary>
+<br/>
+يعتبر النظام معيباً ومخترقاً بحكم التعريف. تتضمن أوامر <code>/rls</code> و <code>/audit</code> فحوصات استعلامية آلية مباشرة ضد <code>pg_tables</code> و <code>pg_policies</code> لاكتشاف وتنبيه المطور فوراً بالجداول غير المحمية.
+</details>
+
+<details>
+<summary><b>كيف تعمل طبقة القرار السياقي (CDL)؟</b></summary>
+<br/>
+تجري طبقة الـ CDL مقابلة تمهيدية سريعة لمرة واحدة عبر <code>/brief</code> وتحفظ الاختيارات في <code>.tidyfactor/next-brief.md</code>، مما يسمح للأوامر اللاحقة بالعمل بسلاسة وسرعة دون تكرار الأسئلة.
+</details>
+
+---
+
+## 🏛️ منظومة تايدي فاكتور الشاملة (TidyFactor Ecosystem)
+
+**TidyFactor** هي منظومة برمجية معيارية لمهارات وكلاء الذكاء الاصطناعي وهندسة الويب:
+
 ```
-
-### 2. حقن المهارة داخل مشروع Next.js حالي:
-
-```bash
-# إضافة المهارة مباشرة لمجلد .agents/skills/ في مشروعك
-npx @alwkala/tidyfactor-next add-skill
-```
-
-### 3. النسخ المباشر لمجلد مهارات الوكيل الذكي:
-
-- **Google Antigravity:** `.agents/skills/tidyfactor-next/`
-- **Claude Code:** `.claude-skill/skills/tidyfactor-next/`
-- **Cursor / Codex / Windsurf:** `.agents/skills/tidyfactor-next/`
-
----
-
-## 🏛️ منهجية TidyFactor وحوكمة الامتثال (8/8 Pass)
-
-حققت مهارة `tidyfactor-next` نسبة امتثال **100% (8/8 علامات)** وفق معايير `tidyfactor-skill-architect`:
-
-1. ✅ **انضباط التوجيه (Dispatcher Discipline)**: ملف `SKILL.md` يعمل كموجّه مسارات فقط بدون حشو.
-2. ✅ **مسار واحد لكل نتيجة (One Workflow = One Outcome)**: مسارات عمل معتمدة تنتهي بقوائم تحقق واضحة.
-3. ✅ **ذاكرة تشغيلية نقية (Operational Memory)**: قوالب SQL DDL وسياسات وقواعد تقنية خالصة بدون تنظير.
-4. ✅ **انعدام الهياكل الفارغة (No Empty Structures)**: بنية مسطحة خالية من المجلدات الأحادية.
-5. ✅ **عزل الفلسفة عن الكود (Philosophy Isolation)**: فصل المعايير التشغيلية عن الخطابات الترويجية.
-6. ✅ **نمو مدفوع بالمحفزات (Trigger-Justified Growth)**: إضافة الأوامر بناءً على محفزات معمارية دقيقة.
-7. ✅ **حاجز الأمان والجودة (Security Quality Bar)**: استعلامات تحقق تلقائية لتغطية RLS وتشخيص التسريب.
-8. ✅ **تطابق البيئات المتعددة (Cross-Platform Parity)**: توافق كامل بين Antigravity و Claude و Cursor و Codex.
-
----
-
-## 👨‍💻 معلومات المطور والجهة المطورة
-
-- **الجهة المطورة:** [وكالة الوكالة الرقمية — Alwkala](https://alwkala.com)
-- **المنظومة:** [منظومة TidyFactor للمعمارية والمهارات](https://tidyfactor.com)
-- **المهندس المعماري الرئيسي:** وائل الصديق — Wael S. ([@waels](https://github.com/alwkala))
-- **البريد الإلكتروني:** [hello@alwkala.com](mailto:hello@alwkala.com)
-- **الدعم والاستفسارات:** [https://alwkala.com](https://alwkala.com)
-
----
-
-## 📜 الترخيص وحوكمة المعايير
-
-المهارة منشورة تحت **رخصة MIT**. جميع الحقوق محفوظة © 2026 [Alwkala](https://alwkala.com) / منظومة TidyFactor.
-
-
----
-
-## 🏛️ معمارية منظومة TidyFactor
-
-**منظومة TidyFactor** هي بيئة معمارية برمجية مفتوحة وحزم مهارات لوكلاء الذكاء الاصطناعي قائمة على الفصل التام للمسؤوليات عبر دورة حياة المنتجات:
-
-```text
-منظمة TidyFactor الرسمية (github.com/TidyFactor)
+TidyFactor Organization (github.com/TidyFactor)
 │
-├── مهارات التصميم (Design Skills)
-│   ├── Cinematic    ← تجربة الإبهار البصري / Experience ("Wow")     (صفحات سينمائية تفاعلية)
-│   ├── Design       ← بناء النماذج الأولية / Prototype ("Build")   (محرك تصميم كودي وبديل Figma)
-│   └── Styler       ← الجاهزية للإنتاج والتنسيق / Production ("Ship")  (محرك التنسيق ودعم RTL)
+├── مسارات التصميم (Design Skills)
+│   ├── Cinematic    → الإبهار والتجربة        (صفحات تفاعلية بأسلوب Apple × Cartier)
+│   ├── Design       → البناء والنماذج الأولية  (محرك تصميم الكود وبديل فيجما)
+│   └── Styler       → الإنتاج والشحن الفعلي   (محرك تنسيق أطر العمل ودعم الـ RTL)
 │
-├── مهارات التطوير البرمجي (Development Skills)
-│   ├── HTML         ← المواقع الثابتة وسيو المحتوى / Static & SEO   (هياكل خفيفة وسريعة)
-│   ├── HTMX         ← الواجهات التفاعلية الخفيفة / Hypermedia        (تفاعلات بدون جافاسكريبت معقدة)
-│   ├── JS           ← تطبيقات الصفحة الواحدة بدون أطر / Vanilla SPA  (نماذج تفاعلية بـ ES Modules)
-│   ├── PHP          ← المنظومات المخدمية الحديثة / Server-Rendered  (مكونات حديثة وتطبيقات PHP 8)
-│   └── Next         ← منصات الساس متعددة المستأجرين / Multi-Tenant (Next.js 16 + Postgres RLS)
+├── مسارات التطوير البرمجي (Development Skills)
+│   ├── HTML         → المحتوى والمواقع الثابتة (محرك المواقع الثابتة مع SEO دلالي)
+│   ├── HTMX         → التفاعلية الخفيفة      (تفاعلية تعتمد على السيرفر)
+│   ├── JS           → تطبيقات SPA المستقلة     (تطبيقات رياكتيف بدون أطر عمل)
+│   ├── PHP          → المعمارية الموحدة       (معمارية PHP 8.x الحديثة)
+│   └── Next         → منصات الساس السحابية    (Next.js 16 و React 19 و Supabase RLS والأداء)
 │
-└── مهارات النمو والتسويق (Growth Skills)
-    └── Marketing    ← استراتيجيات النمو والمبيعات / Growth & SEO    (تسويق الاستجابة المباشرة)
+└── مسارات النمو والتسويق (Growth Skills)
+    └── Marketing    → المبيعات والنمو         (التسويق المباشر واستراتيجيات الـ SEO والمحتوى)
 ```
 
-### 💎 ثلاثي الواجهات الأمامية والتجربة (Frontend Triad)
+### 📦 حزم ومستودعات المجتمع المعتمدة
 
-```text
-                TidyFactor
-                    │
-          ┌─────────┼─────────┐
-          │         │         │
-      Cinematic   Design    Styler
-          │         │         │
-       Experience Prototype Production
-          │         │         │
-       "Wow"      "Build"   "Ship"
-```
-
-### 📦 مصفوفة التكامل الشامل للمجتمع (GitHub • Skill • NPM)
-
-| المسار البرمجي | الفئة | مستودع GitHub | مهارة الوكيل | حزمة NPM |
+| المسار | التصنيف | مستودع GitHub | مهارة الوكيل | حزمة NPM |
 | :--- | :--- | :--- | :--- | :--- |
-| **Cinematic** | التصميم | [`TidyFactor/Cinematic`](https://github.com/TidyFactor/Cinematic) | `tidyfactor-cinematic` | [`@alwkala/create-cinematic-kit`](https://www.npmjs.com/package/@alwkala/create-cinematic-kit) |
-| **Design** | التصميم | [`TidyFactor/Design`](https://github.com/TidyFactor/Design) | `tidyfactor-design` | [`@alwkala/tidyfactor-design`](https://www.npmjs.com/package/@alwkala/tidyfactor-design) |
-| **Styler** | التصميم | [`TidyFactor/Styler`](https://github.com/TidyFactor/Styler) | `tidyfactor-styler` | [`@alwkala/tidyfactor-styler`](https://www.npmjs.com/package/@alwkala/tidyfactor-styler) |
-| **Next** | التطوير | [`TidyFactor/Next`](https://github.com/TidyFactor/Next) | `tidyfactor-next` | [`@alwkala/tidyfactor-next`](https://www.npmjs.com/package/@alwkala/tidyfactor-next) |
-| **HTML** | التطوير | [`TidyFactor/HTML`](https://github.com/TidyFactor/HTML) | `tidyfactor-html` | [`@alwkala/tidyfactor-html`](https://www.npmjs.com/package/@alwkala/tidyfactor-html) |
-| **HTMX** | التطوير | [`TidyFactor/HTMX`](https://github.com/TidyFactor/HTMX) | `tidyfactor-htmx` | [`@alwkala/tidyfactor-htmx`](https://www.npmjs.com/package/@alwkala/tidyfactor-htmx) |
-| **JS** | التطوير | [`TidyFactor/JS`](https://github.com/TidyFactor/JS) | `tidyfactor-js` | [`@alwkala/tidyfactor-js`](https://www.npmjs.com/package/@alwkala/tidyfactor-js) |
-| **PHP** | التطوير | [`TidyFactor/PHP`](https://github.com/TidyFactor/PHP) | `tidyfactor-php` | [`@alwkala/tidyfactor-php`](https://www.npmjs.com/package/@alwkala/tidyfactor-php) |
-| **Marketing** | النمو | [`TidyFactor/Marketing`](https://github.com/TidyFactor/Marketing) | `tidyfactor-marketing` | [`@alwkala/tidyfactor-marketing`](https://www.npmjs.com/package/@alwkala/tidyfactor-marketing) |
+| **Next** | Development | [`TidyFactor/Next`](https://github.com/TidyFactor/Next) | `tidyfactor-next` | [`@alwkala/tidyfactor-next`](https://www.npmjs.com/package/@alwkala/tidyfactor-next) |
+| **Cinematic** | Design | [`TidyFactor/Cinematic`](https://github.com/TidyFactor/Cinematic) | `tidyfactor-cinematic` | [`@alwkala/create-cinematic-kit`](https://www.npmjs.com/package/@alwkala/create-cinematic-kit) |
+| **Design** | Design | [`TidyFactor/Design`](https://github.com/TidyFactor/Design) | `tidyfactor-design` | [`@alwkala/tidyfactor-design`](https://www.npmjs.com/package/@alwkala/tidyfactor-design) |
+| **Styler** | Design | [`TidyFactor/Styler`](https://github.com/TidyFactor/Styler) | `tidyfactor-styler` | [`@alwkala/tidyfactor-styler`](https://www.npmjs.com/package/@alwkala/tidyfactor-styler) |
+| **HTML** | Development | [`TidyFactor/HTML`](https://github.com/TidyFactor/HTML) | `tidyfactor-html` | [`@alwkala/tidyfactor-html`](https://www.npmjs.com/package/@alwkala/tidyfactor-html) |
+| **HTMX** | Development | [`TidyFactor/HTMX`](https://github.com/TidyFactor/HTMX) | `tidyfactor-htmx` | [`@alwkala/tidyfactor-htmx`](https://www.npmjs.com/package/@alwkala/tidyfactor-htmx) |
+| **JS** | Development | [`TidyFactor/JS`](https://github.com/TidyFactor/JS) | `tidyfactor-js` | [`@alwkala/tidyfactor-js`](https://www.npmjs.com/package/@alwkala/tidyfactor-js) |
+| **PHP** | Development | [`TidyFactor/PHP`](https://github.com/TidyFactor/PHP) | `tidyfactor-php` | [`@alwkala/tidyfactor-php`](https://www.npmjs.com/package/@alwkala/tidyfactor-php) |
+| **Marketing** | Growth | [`TidyFactor/Marketing`](https://github.com/TidyFactor/Marketing) | `tidyfactor-marketing` | [`@alwkala/tidyfactor-marketing`](https://www.npmjs.com/package/@alwkala/tidyfactor-marketing) |
 
 ---
 
-## 👨‍💻 المنظمة والتواصل والدعم
+## 🏛️ منهجية TidyFactor وحوكمة الامتثال
 
-- 🌐 **الموقع الرسمي للمنظومة:** [https://tidyfactor.com/](https://tidyfactor.com/)
-- 📚 **التوثيق الرسمي المعتمد:** [https://tidyfactor.com/documentation](https://tidyfactor.com/documentation)
-- 🤝 **الشريك التقني الرسمي:** [الوكالة الرقمية Alwkala](https://alwkala.com/)
+تلتزم `tidyfactor-next` بجميع **القواعد الهيكلية الثماني** لمنظومة [`tidyfactor-skill-architect`](https://github.com/TidyFactor/Skill-Architect):
+
+1. ✅ **انضباط التوجيه (Dispatcher Discipline)**: ملف `SKILL.md` موجه أوامر خفيف يستهلك ~350 توكن فقط.
+2. ✅ **مسار عمل واحد = نتيجة واحدة**: كل مسار يمتلك مخرجاً واحداً وقائمة تحقق دقيقة.
+3. ✅ **ذاكرة تشغيلية نقية**: قوالب SQL وأنماط معمارية دون حشو تسويقي.
+4. ✅ **بنية نظيفة**: لا توجد مجلدات فارغة أو أحادية الملف.
+5. ✅ **فصل الفلسفة**: عزل الفلسفة عن ملفات التنفيذ البرمجي التشغيلية.
+6. ✅ **نمو قائم على المحفزات**: إضافة الأوامر بناءً على مراحل دورة حياة الساس الحقيقية.
+7. ✅ **حاجز الجودة والأمان**: استعلامات آلية لفحص سياسات RLS واكتشاف التسريب.
+8. ✅ **توافق عبر المنصات**: أداء متطابق تماماً عبر Antigravity و Claude Code و Cursor و Codex.
+
+---
+
+## 🤝 المساهمة والتطوير المجتمعي
+
+نرحب بمساهمات المجتمع والمطورين، ومحولات طبقات الاستعلام الإضافية، وتحسينات مسارات العمل!
+
+يرجى مراجعة [CONTRIBUTING.md](CONTRIBUTING.md) و [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) قبل فتح طلب سحب (Pull Request). يجب أن تلتزم التعديلات المقترحة بالقواعد الهيكلية لـ `tidyfactor-skill-architect`.
+
+---
+
+## 👨‍💻 قنوات الدعم والتواصل
+
+- 🌐 **الموقع الرسمي:** [tidyfactor.com](https://tidyfactor.com/)
+- 📚 **التوثيق البرمجي:** [tidyfactor.com/documentation](https://tidyfactor.com/documentation)
+- 🤝 **الشريك الاستراتيجي:** [وكالة الوكالة الرقمية (Alwkala Digital Agency)](https://alwkala.com/)
 - 🐙 **منظمة GitHub الرسمية:** [github.com/TidyFactor](https://github.com/TidyFactor)
-- 📧 **استفسارات الأعمال والشركات:** [hello@tidyfactor.com](mailto:hello@tidyfactor.com)
-- 📱 **واتساب:** [+20 101 665 6899](https://wa.me/201016656899)
-- 📞 **الهاتف:** +20 101 665 6899
-- 📍 **المقر:** القاهرة، جمهورية مصر العربية
+- 📧 **البريد الإلكتروني:** [hello@tidyfactor.com](mailto:hello@tidyfactor.com)
 
 ---
 
-## 📜 الترخيص والمجتمع
+## 📜 الترخيص
 
-مرخصة تحت رخصة **Apache License 2.0**. حقوق النشر محفوظة (c) 2026 لصالح [منظومة TidyFactor](https://tidyfactor.com) و[الوكالة الرقمية Alwkala](https://alwkala.com).
+مرخصة بموجب رخصة **Apache License 2.0**. جميع الحقوق محفوظة (c) 2026 [TidyFactor](https://tidyfactor.com) و [Alwkala](https://alwkala.com).
