@@ -13,6 +13,12 @@
 
 [🚀 البدء السريع](#-البدء-السريع) • [🎯 لماذا TidyFactor/Next](#-لماذا-tidyfactornext) • [🔒 عزل المستأجرين](#-نموذج-عزل-المستأجرين-الصارم-locked-tenant-isolation) • [⚡ دورة حياة الأوامر الـ 15](#-دورة-حياة-أوامر-الساس-الـ-15-saas-command-lifecycle) • [🚀 محرك الأداء](#-محرك-الأداء-وتشخيص-الموارد) • [❓ الأسئلة الشائعة](#-الأسئلة-الشائعة-faq) • [📖 English Version](README.md)
 
+<br/><br/>
+
+<p align="center">
+  <img src="assets/demo-hero-dark.png" alt="TidyFactor Next.js Architecture Engine Showcase" width="100%" />
+</p>
+
 </div>
 
 ---
@@ -95,6 +101,10 @@ graph TD
     Postgres --> RLS["🔒 Row Level Security (RLS)<br/>USING (tenant_id = auth.jwt() ->> 'tenant_id')"]
     RLS --> Data["✅ Isolated Tenant Data"]
 ```
+
+<p align="center">
+  <img src="assets/demo-architecture.png" alt="Fail-Closed Tenant Isolation Security Pipeline" width="100%" />
+</p>
 
 | لمهندسي الفول ستاك | لمؤسسي الشركات والمدراء التقنيين | لوكلاء البرمجة الذكية (AI Agents) |
 |---|---|---|

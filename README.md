@@ -13,6 +13,12 @@ Give **Google Antigravity, Claude Code, Cursor, OpenAI Codex, or Windsurf** a lo
 
 [🚀 Quick Start](#-quick-start) • [🎯 Why TidyFactor/Next](#-why-tidyfactornext) • [🔒 Tenant Isolation](#-locked-tenant-isolation-model) • [⚡ 15-Stage Lifecycle](#-15-stage-saas-command-lifecycle) • [🚀 Perf Engine](#-performance--optimization-engine) • [❓ FAQ](#-faq) • [📖 بالعربية](README.ar.md)
 
+<br/><br/>
+
+<p align="center">
+  <img src="assets/demo-hero-dark.png" alt="TidyFactor Next.js Architecture Engine Showcase" width="100%" />
+</p>
+
 </div>
 
 ---
@@ -95,6 +101,10 @@ graph TD
     Postgres --> RLS["🔒 Row Level Security (RLS)<br/>USING (tenant_id = auth.jwt() ->> 'tenant_id')"]
     RLS --> Data["✅ Isolated Tenant Data"]
 ```
+
+<p align="center">
+  <img src="assets/demo-architecture.png" alt="Fail-Closed Tenant Isolation Security Pipeline" width="100%" />
+</p>
 
 | For Fullstack Engineers | For SaaS Founders & CTOs | For AI Coding Agents |
 |---|---|---|

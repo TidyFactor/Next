@@ -72,6 +72,7 @@ function build() {
     'memory',
     'tools',
     'bin',
+    'assets',
     'brand.json',
     '.tidyfactor',
     'package.json',
