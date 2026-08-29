@@ -1,6 +1,6 @@
 <div align="center" dir="rtl">
 
-# ⚡ مهارة تايتفكتور لمعمارية ستارت أب `TidyFactor Next.js v1.3.0`
+# ⚡ مهارة تايتفكتور لمعمارية ستارت أب `TidyFactor Next.js v1.4.0`
 ### مهارة المعمارية السحابية متعددة المستأجرين (Multi-Tenant SaaS) وتأمين البيانات ومحرك الأداء لوكلاء الذكاء الاصطناعي
 
 امنح وكلاء البرمجة الذكية (**Google Antigravity و Claude Code و Cursor و OpenAI Codex و Windsurf**) معمارية أمنية محكمة لا تقبل التهاون على **Next.js 16 + React 19 + Supabase** — ليتوقف وكيلك عن ارتجال عزل المستأجرين ويبدأ في فرضه حتمياً.

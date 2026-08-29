@@ -2,7 +2,7 @@
   "ecosystem": "tidyfactor",
   "track": "next",
   "name": "tidyfactor-next",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "npmPackage": "@alwkala/tidyfactor-next",
   "github": "https://github.com/TidyFactor/Next",
   "skillFile": "../tidyfactor-next-v1.3.0.skill",

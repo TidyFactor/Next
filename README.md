@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚡ TidyFactor Next.js `v1.3.0`
+# ⚡ TidyFactor Next.js `v1.4.0`
 ### The Production-Grade Multi-Tenant SaaS Architecture & Performance Skill for AI Coding Agents
 
 Give **Google Antigravity, Claude Code, Cursor, OpenAI Codex, or Windsurf** a locked, security-first architecture for **Next.js 16 + React 19 + Supabase** — so your agent stops improvising tenant isolation and starts enforcing it.
