@@ -30,8 +30,8 @@ This project exposes an Agentic Skill under `SKILL.md` (and `.claude-skill/SKILL
 
 ## 🛠️ CLI Execution Modes
 
-- **Interactive Setup Wizard** (`npx @alwkala/tidyfactor-next`): Launches interactive terminal wizard to scaffold projects, select query layers (Supabase JS, Drizzle, Prisma), configure auth providers, and establish tenant resolution strategies.
-- **Skill Injection Mode** (`npx @alwkala/tidyfactor-next add-skill`): Injects `.agents/skills/tidyfactor-next/` directly into any existing Next.js repository.
+- **Interactive Setup Wizard** (`npx @tidyfactor/cli-next`): Launches interactive terminal wizard to scaffold projects, select query layers (Supabase JS, Drizzle, Prisma), configure auth providers, and establish tenant resolution strategies.
+- **Skill Injection Mode** (`npx @tidyfactor/cli-next add-skill`): Injects `.agents/skills/tidyfactor-next/` directly into any existing Next.js repository.
 - **AI Agent Execution**: Antigravity, Claude Code, Cursor, Codex, and Windsurf execute slash commands directly via `references/commands/<name>.md`.
 
 ---

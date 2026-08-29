@@ -10,9 +10,9 @@
 | Field | Value |
 |---|---|
 | **Unified Tool Name** | `tidyfactor-next` |
-| **NPM Package** | [`@alwkala/tidyfactor-next`](https://www.npmjs.com/package/@alwkala/tidyfactor-next) |
-| **CLI Execution Command** | `npx @alwkala/tidyfactor-next` or `npx tidyfactor-next` |
-| **Skill Injection Command** | `npx @alwkala/tidyfactor-next add-skill` or `npx tidyfactor-next add-skill` |
+| **NPM Package** | [`@tidyfactor/next`](https://www.npmjs.com/package/@tidyfactor/next) |
+| **CLI Execution Command** | `npx @tidyfactor/cli-next` or `npx tidyfactor-next` |
+| **Skill Injection Command** | `npx @tidyfactor/cli-next add-skill` or `npx tidyfactor-next add-skill` |
 | **GitHub Repository** | [TidyFactor/Next](https://github.com/TidyFactor/Next) |
 | **Version** | `1.3.0` |
 | **Category** | Next.js 16 Multi-Tenant SaaS Architecture, Runtime Optimization & Dev-Perf Engine |

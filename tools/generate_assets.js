@@ -406,7 +406,7 @@ const socialPreviewHtml = `<!DOCTYPE html>
         <div class="terminal-card">
           <div class="cmd-text">
             <span class="cmd-prompt">$</span>
-            <span>npx @alwkala/tidyfactor-next add-skill</span>
+            <span>npx @tidyfactor/cli-next add-skill</span>
           </div>
           <div class="shield-badge">⚡ INSTANT INJECT</div>
         </div>
@@ -720,7 +720,7 @@ const demoHeroDarkHtml = `<!DOCTYPE html>
       <div class="terminal-content">
         <div class="term-cmd">
           <span class="term-prompt">$</span>
-          <span class="term-code">npx @alwkala/tidyfactor-next add-skill</span>
+          <span class="term-code">npx @tidyfactor/cli-next add-skill</span>
         </div>
         <div class="copy-btn">Copy</div>
       </div>
@@ -1042,7 +1042,7 @@ const demoHeroLightHtml = `<!DOCTYPE html>
       <div class="terminal-content">
         <div class="term-cmd">
           <span class="term-prompt">$</span>
-          <span class="term-code">npx @alwkala/tidyfactor-next add-skill</span>
+          <span class="term-code">npx @tidyfactor/cli-next add-skill</span>
         </div>
         <div class="copy-btn">Copy</div>
       </div>
