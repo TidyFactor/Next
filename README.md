@@ -9,7 +9,7 @@ Give **Google Antigravity, Claude Code, Cursor, OpenAI Codex, or Windsurf** a lo
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=for-the-badge)](LICENSE)
 [![Tenant Isolation](https://img.shields.io/badge/Tenant%20Isolation-Postgres%20RLS-3ECF8E.svg?style=for-the-badge)](#-locked-tenant-isolation-model)
 [![Next.js 16 Ready](https://img.shields.io/badge/Next.js-16%20App%20Router-black.svg?style=for-the-badge)](#-why-tidyfactornext)
-[![Architect Score](https://img.shields.io/badge/Architect%20Score-8%2F8%20Pass%20(100%25)-green.svg?style=for-the-badge)](#%EF%B8%8F-tidyfactor-skill-methodology--governance)
+[![Architect Score](https://img.shields.io/badge/Architect%20Score-13%2F13%20Pass%20(100%25)-green.svg?style=for-the-badge)](#%EF%B8%8F-tidyfactor-skill-methodology--governance)
 
 [🚀 Quick Start](#-quick-start) • [🎯 Why TidyFactor/Next](#-why-tidyfactornext) • [🔒 Tenant Isolation](#-locked-tenant-isolation-model) • [⚡ 15-Stage Lifecycle](#-15-stage-saas-command-lifecycle) • [🚀 Perf Engine](#-performance--optimization-engine) • [❓ FAQ](#-faq) • [📖 بالعربية](README.ar.md)
 
@@ -367,6 +367,19 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE
 - 🤝 **Commercial Partner:** [Alwkala Digital Agency](https://alwkala.com/)
 - 🐙 **GitHub Organization:** [github.com/TidyFactor](https://github.com/TidyFactor)
 - 📧 **Inquiries:** [hello@tidyfactor.com](mailto:hello@tidyfactor.com)
+
+---
+
+## 👨‍💻 Organization & Support
+
+- 🌐 **Official Website:** [https://tidyfactor.com/](https://tidyfactor.com/)
+- 📚 **Official Documentation:** [https://tidyfactor.com/documentation](https://tidyfactor.com/documentation)
+- 🤝 **Official Partner Website:** [Alwkala Digital Agency](https://alwkala.com/)
+- 🐙 **GitHub Organization:** [github.com/TidyFactor](https://github.com/TidyFactor)
+- 📧 **Business Inquiries:** [hello@tidyfactor.com](mailto:hello@tidyfactor.com)
+- 📱 **WhatsApp:** [+20 101 665 6899](https://wa.me/201016656899)
+- 📞 **Phone:** +20 101 665 6899
+- 📍 **Location:** Cairo, Egypt
 
 ---
 
