@@ -1,6 +1,6 @@
 # Changelog — TidyFactor Next.js
 
-All notable changes to the **[@alwkala/tidyfactor-next](https://www.npmjs.com/package/@alwkala/tidyfactor-next)** package will be documented in this file.
+All notable changes to the **[@tidyfactor/next](https://www.npmjs.com/package/@tidyfactor/next)** package will be documented in this file.
 
 ## [1.4.0] - 2026-08-29
 
@@ -69,4 +69,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Benchmark Noise Control with Cold/Warm run separation and 3-run median protocol.
   - SaaS Safety Boundary ensuring performance optimizations never weaken tenant isolation or security.
 - **Project Memory & ADR Log**: Generation and synchronization of `ARCHITECTURE.md` with Performance Context and Risk Log.
-- **CLI Wizard & Multi-Agent Distribution**: Standalone NPX installer (`npx @alwkala/tidyfactor-next add-skill`), `.agents/skills/tidyfactor-next/`, `.claude-skill/`, and global IDE integration.
+- **CLI Wizard & Multi-Agent Distribution**: Standalone NPX installer (`npx @tidyfactor/cli-next add-skill`), `.agents/skills/tidyfactor-next/`, `.claude-skill/`, and global IDE integration.

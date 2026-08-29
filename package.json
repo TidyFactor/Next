@@ -1,5 +1,5 @@
 {
-  "name": "@alwkala/tidyfactor-next",
+  "name": "@tidyfactor/next",
   "version": "1.4.0",
   "description": "TidyFactor Next.js track — production-grade multi-tenant SaaS on Next.js 16, React 19, TypeScript strict, and Supabase with CDL Contextual Decision Layer",
   "main": "SKILL.md",
@@ -23,7 +23,7 @@
     "claude-code",
     "cursor"
   ],
-  "author": "TidyFactor & Alwkala <hello@tidyfactor.com> (https://alwkala.com)",
+  "author": "TidyFactor <hello@tidyfactor.com> (https://tidyfactor.com)",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
