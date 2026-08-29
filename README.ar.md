@@ -9,7 +9,7 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=for-the-badge)](LICENSE)
 [![Tenant Isolation](https://img.shields.io/badge/Tenant%20Isolation-Postgres%20RLS-3ECF8E.svg?style=for-the-badge)](#-نموذج-عزل-المستأجرين-الصارم-locked-tenant-isolation)
 [![Next.js 16 Ready](https://img.shields.io/badge/Next.js-16%20App%20Router-black.svg?style=for-the-badge)](#-لماذا-tidyfactornext)
-[![Architect Score](https://img.shields.io/badge/Architect%20Score-8%2F8%20Pass%20(100%25)-green.svg?style=for-the-badge)](#-منهجية-tidyfactor-وحوكمة-الامتثال)
+[![Architect Score](https://img.shields.io/badge/Architect%20Score-13%2F13%20Pass%20(100%25)-green.svg?style=for-the-badge)](#-منهجية-tidyfactor-وحوكمة-الامتثال)
 
 [🚀 البدء السريع](#-البدء-السريع) • [🎯 لماذا TidyFactor/Next](#-لماذا-tidyfactornext) • [🔒 عزل المستأجرين](#-نموذج-عزل-المستأجرين-الصارم-locked-tenant-isolation) • [⚡ دورة حياة الأوامر الـ 15](#-دورة-حياة-أوامر-الساس-الـ-15-saas-command-lifecycle) • [🚀 محرك الأداء](#-محرك-الأداء-وتشخيص-الموارد) • [❓ الأسئلة الشائعة](#-الأسئلة-الشائعة-faq) • [📖 English Version](README.md)
 
@@ -370,6 +370,19 @@ TidyFactor Organization (github.com/TidyFactor)
 
 ---
 
-## 📜 الترخيص
+## 👨‍💻 المنظمة والتواصل والدعم
 
-مرخصة بموجب رخصة **Apache License 2.0**. جميع الحقوق محفوظة (c) 2026 [TidyFactor](https://tidyfactor.com) و [Alwkala](https://alwkala.com).
+- 🌐 **الموقع الرسمي للمنظومة:** [https://tidyfactor.com/](https://tidyfactor.com/)
+- 📚 **التوثيق الرسمي المعتمد:** [https://tidyfactor.com/documentation](https://tidyfactor.com/documentation)
+- 🤝 **الشريك التقني الرسمي:** [وكالة الوكالة الرقمية Alwkala](https://alwkala.com/)
+- 🐙 **منظمة GitHub الرسمية:** [github.com/TidyFactor](https://github.com/TidyFactor)
+- 📧 **استفسارات الأعمال والشراكات:** [hello@tidyfactor.com](mailto:hello@tidyfactor.com)
+- 📱 **واتساب:** [+20 101 665 6899](https://wa.me/201016656899)
+- 📞 **الهاتف:** +20 101 665 6899
+- 📍 **المقر:** القاهرة، جمهورية مصر العربية
+
+---
+
+## 📜 الترخيص والمجتمع
+
+مرخصة تحت رخصة **Apache License 2.0**. حقوق النشر محفوظة (c) 2026 لصالح [منظومة TidyFactor](https://tidyfactor.com) و[وكالة الوكالة الرقمية Alwkala](https://alwkala.com).
