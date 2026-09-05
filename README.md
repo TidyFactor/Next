@@ -65,16 +65,30 @@ Most Next.js agent skills teach your AI how to write idiomatic code — App Rout
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Installation & Quick Start
 
-### 1. Interactive Project Wizard & Direct Injection
+Choose your preferred installation method:
 
+### Option A: Via TidyFactor CLI (Recommended)
+Install directly using the official ecosystem package runner into your active workspace:
 ```bash
-# Interactive project wizard — scaffolds a new multi-tenant SaaS project
-npx @tidyfactor/cli-next
+npx @tidyfactor/cli add next
+```
+*Or if you have the CLI installed globally (`npm i -g @tidyfactor/cli`):*
+```bash
+tidyfactor add next
+```
 
-# Or inject the skill directly into an existing Next.js repository
-npx @tidyfactor/cli-next add-skill
+### Option B: Via Open Agent Skills Ecosystem (skills.sh / Vercel Labs)
+Install using the universal multi-agent standard across all supported IDEs (Cursor, Antigravity, Claude Code, Windsurf, Trae, Codex):
+```bash
+npx skills add tidyfactor/next
+```
+
+### Option C: Standalone Zero-Dependency Runner (NPM Direct)
+Run the dedicated skill installer directly with automatic cache invalidation:
+```bash
+npx @tidyfactor/next@latest
 ```
 
 ### 2. Workspace Installation per AI Agent
